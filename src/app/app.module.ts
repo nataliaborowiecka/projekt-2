@@ -1,3 +1,5 @@
+import { ClientsModule } from './clients/clients.module';
+import { UsersModule } from './users/users.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent
   ],
   imports: [
+    ClientsModule,
+    UsersModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
