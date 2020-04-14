@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PrivateComponent } from './private/private.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const routes: Routes = [
   {
@@ -25,7 +27,9 @@ const routes: Routes = [
   declarations: [PrivateComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatSidenavModule,
+    MatToolbarModule
   ]
 })
 export class PrivateModule { }
