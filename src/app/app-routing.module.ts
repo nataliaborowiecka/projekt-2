@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
 const routes: Routes = [
   {
-    path: 'users',
-    loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+    path: '',
+    loadChildren: () => import('./public/public.module').then(m => m.PublicModule),
   },
   {
-    path: 'clients',
-    loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule)
+    path: 'app',
+    loadChildren: () => import('./private/private.module').then(m => m.PrivateModule)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

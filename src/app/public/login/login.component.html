@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>
+    Zaloguj sie
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <input placeholder="Login" type="text" formControlName="login">
+      <input placeholder="Hasło" type="password" formControlName="password">
+      <button (click)="login()">Zaloguj</button>
+    </form>
+  </mat-card-content>
+</mat-card>
