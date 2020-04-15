@@ -10,8 +10,26 @@
  .menu {
    width: 10% ;
    background-color: rgb(156, 155, 155);
+   display: flex;
+   align-items: center;
  };
 .toolbar {
   height: 10%;
   background-color: rgb(156, 155, 155);
+}
+.usersbutton {
+  background-color: rgba(128, 128, 128, 0);
+  margin: auto;
+
+};
+.clientsbutton {
+  background-color: rgba(128, 128, 128, 0);
+  margin: auto;
+};
+.logoutbutton {
+  padding: 0 14px;
+  background-color: rgba(128, 128, 128, 0);
+};
+.spacer {
+  flex: 1 1 auto;
 }

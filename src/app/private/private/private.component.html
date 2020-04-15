@@ -1,9 +1,26 @@
 
 <mat-sidenav-container class="container">
 
- <mat-sidenav class="menu" mode="side" opened>menu</mat-sidenav>
+ <mat-sidenav class="menu" mode="side" opened>
+  <button mat-raised-button [matMenuTriggerFor]="menu" class="usersbutton" > Użytkownicy</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item> Lista użytkowników </button>
+  </mat-menu>
+  <button mat-raised-button [matMenuTriggerFor]="menu2" class="clientsbutton"> Klienci </button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item> Lista klientów </button>
+  </mat-menu>
+ </mat-sidenav>
  <mat-sidenav-content>
-    <mat-toolbar class="toolbar">wyloguj </mat-toolbar>
+    <mat-toolbar class="toolbar">
+      <span class="spacer"></span>
+     <button mat-raised-button [matMenuTriggerFor]="menul" class="logoutbutton">
+       <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+     </button>
+    <mat-menu #menul="matMenu">
+      <button mat-menu-item>Wyloguj</button>
+    </mat-menu>
+     </mat-toolbar>
     <router-outlet></router-outlet>
  </mat-sidenav-content>
 
