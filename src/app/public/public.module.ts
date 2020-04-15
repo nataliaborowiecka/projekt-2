@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -23,7 +24,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
 
   ]
 })
