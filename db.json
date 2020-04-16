@@ -1,0 +1,13 @@
+{
+  "users": [
+    { "id": 1, "login": "admin1", "password": "admin1"},
+    { "id": 2, "login": "admin2", "password": "admin2"},
+    { "id": 3, "login": "admin3", "password": "admin3"}
+  ],
+  "clients": [
+    { "id": 1, "name": "admin1", "surname": "admin1", "phone": "123"},
+     { "id": 2, "name": "admin2", "surname": "admin2", "phone": "1234"},
+    { "id": 3, "name": "admin3", "surname": "admin3", "phone": "12345"}
+  ]
+  }
+
