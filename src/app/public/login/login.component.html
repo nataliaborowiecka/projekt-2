@@ -1,11 +1,14 @@
-<mat-card class="card">
-  <form class="login-form">
-    <mat-form-field [formGroup]="form">
-      <input matInput placeholder="Login" formControlName="login">
-    </mat-form-field>
-    <mat-form-field [formGroup]="form">
-      <input matInput placeholder="Hasło" formControlName="password">
-    </mat-form-field>
-  </form>
-  <button mat-raised-button class="button" (click)="login()">Zaloguj</button>
-</mat-card>
+<div class="parent">
+  <mat-card class="card">
+    <form class="login-form">
+      <mat-form-field [formGroup]="form">
+        <input matInput placeholder="Login" formControlName="login">
+      </mat-form-field>
+      <mat-form-field [formGroup]="form">
+        <input matInput placeholder="Hasło" formControlName="password">
+      </mat-form-field>
+    </form>
+    <button mat-raised-button class="button" (click)="login()">Zaloguj</button>
+  </mat-card>
+</div>
+

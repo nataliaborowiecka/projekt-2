@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class PublicService {
 
   constructor(private http: HttpClient) {}
-     getUserlist () {
+  getUserlist () {
     return this.http.get(`${environment.backendUrl}users`);
   }
 }

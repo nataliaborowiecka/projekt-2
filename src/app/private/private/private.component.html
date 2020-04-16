@@ -4,11 +4,11 @@
  <mat-sidenav class="menu" mode="side" opened>
   <button mat-raised-button [matMenuTriggerFor]="menu" class="usersbutton" > Użytkownicy</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item> Lista użytkowników </button>
+    <button mat-menu-item [routerLink]="['/app/users']"> Lista użytkowników </button>
   </mat-menu>
   <button mat-raised-button [matMenuTriggerFor]="menu2" class="clientsbutton"> Klienci </button>
   <mat-menu #menu2="matMenu">
-    <button mat-menu-item> Lista klientów </button>
+    <button mat-menu-item [routerLink]="['/app/clients']"> Lista klientów </button>
   </mat-menu>
  </mat-sidenav>
  <mat-sidenav-content>

@@ -2,6 +2,7 @@ import { PublicService } from './../public.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private publicService: PublicService,
+    private _snackBar: MatSnackBar,
               private router: Router) { }
 
   ngOnInit(): void {
@@ -32,7 +34,7 @@ export class LoginComponent implements OnInit {
             alert('Twoje hasło jest złe!');
           }
         } else {
-          alert('Nie znaleziono użytkownika');
+          this._snackBar.open('Nie znaleziono uzytkownika');
         }
       }
     )
