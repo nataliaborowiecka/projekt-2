@@ -1,6 +1,5 @@
 import { ClientsService } from './../clients.service';
 import { Router } from '@angular/router';
-import { PublicService } from './../../../public/public.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -23,7 +22,6 @@ export class AddComponent implements OnInit {
   save() {
     console.log('dodano', this.form.value.name);
 
-    }
   }
 
-
+}

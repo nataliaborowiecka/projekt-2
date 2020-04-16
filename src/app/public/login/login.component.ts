@@ -2,39 +2,47 @@ import { PublicService } from './../public.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
   form = new FormGroup({
     login: new FormControl(),
     password: new FormControl(),
   });
 
-  constructor(private publicService: PublicService,
-              private router: Router) { }
+  constructor(
+    private publicService: PublicService,
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   login() {
     console.log('działa', this.form.value.login);
-    this.publicService.getUserlist().subscribe(
-      (listOfUsersFromBackend: any) => {
-        const findUser =listOfUsersFromBackend.find(user => user.login === this.form.value.login);
+    this.publicService
+      .getUserlist()
+      .subscribe((listOfUsersFromBackend: any) => {
+        const findUser = listOfUsersFromBackend.find(
+          (user) => user.login === this.form.value.login
+        );
         if (findUser) {
           if (findUser.password === this.form.value.password) {
             this.router.navigateByUrl('/app/users');
           } else {
-            alert('Twoje hasło jest złe!');
+            this.snackBar.open('Hasło niepoprawne', 'OK', {
+              duration: 2000,
+            });
           }
         } else {
-          alert('Nie znaleziono użytkownika');
+          this.snackBar.open('Nie znaleziono użytkownika', 'OK', {
+            duration: 2000,
+          });
         }
-      }
-    )
+      });
   }
 }
