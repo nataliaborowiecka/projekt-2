@@ -2,6 +2,7 @@ import { ClientsService } from './../clients.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add',
@@ -16,11 +17,18 @@ export class AddComponent implements OnInit {
   });
 
   constructor(private clientsService: ClientsService,
-              private router: Router) {}
+              private router: Router,
+              private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
   save() {
     console.log('dodano', this.form.value.name);
+    this.clientsService.add(this.form.value).subscribe( response => {
+      this.router.navigate(['app/clients']);
+      this.snackBar.open('Dodano klienta', '', {
+        duration: 2000
+      })
+    })
 
   }
 

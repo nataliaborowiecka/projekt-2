@@ -1,2 +1,27 @@
-<p> users list  </p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Imię </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="surname">
+    <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+    <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="button-container">
+  <button mat-fab aria-label="button" class="button" [routerLink]="['./add']">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

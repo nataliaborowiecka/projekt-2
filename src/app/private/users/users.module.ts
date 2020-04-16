@@ -5,7 +5,9 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ListComponent } from './list/list.component';
 import { ViewComponent } from './view/view.component';
-import { componentFactoryName } from '@angular/compiler';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 const routes: Routes = [
@@ -30,7 +32,10 @@ const routes: Routes = [
   declarations: [AddComponent, EditComponent, ListComponent, ViewComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    MatIconModule,
+    MatButtonModule,
+    RouterModule.forChild(routes),
+    MatTableModule
   ]
 })
 export class UsersModule { }
