@@ -11,4 +11,7 @@ export class UsersService {
   getUsers() {
     return this.http.get(`${environment.backendUrl}users`);
   }
+  add(form) {
+    return this.http.post(`${environment.backendUrl}users`, form);
+  }
 }

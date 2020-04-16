@@ -8,4 +8,10 @@
 };
 .button {
   background-color: rgba(114, 113, 113, 0.603);;
+};
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

@@ -1,1 +1,12 @@
-<p>add add add add</p>
+<mat-card>
+  <div>Dodaj użytkownika</div>
+  <form class="addForm">
+    <mat-form-field [formGroup]="form">
+      <input matInput placeholder="Imię" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field [formGroup]="form">
+      <input matInput placeholder="Nazwisko" formControlName="surname" />
+    </mat-form-field>
+    <button mat-raised-button (click)=save()>Dodaj</button>
+  </form>
+</mat-card>

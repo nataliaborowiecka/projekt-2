@@ -4,8 +4,11 @@
       Użytkownicy
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['./app/users']">
+      <button mat-menu-item [routerLink]="['/app/users']">
         Lista użytkowników
+      </button>
+      <button mat-menu-item [routerLink]="['/app/users/add']">
+        Dodaj użytkownika
       </button>
     </mat-menu>
     <button mat-raised-button [matMenuTriggerFor]="menu2" class="clientsbutton">
@@ -26,13 +29,14 @@
       <button
         mat-raised-button
         [matMenuTriggerFor]="menul"
-        class="logoutbutton">
+        class="logoutbutton"
+      >
         <mat-icon aria-hidden="false" aria-label="Example home icon"
           >person</mat-icon
         >
       </button>
       <mat-menu #menul="matMenu">
-        <button mat-menu-item  [routerLink]="['../']" >Wyloguj</button>
+        <button mat-menu-item [routerLink]="['../']">Wyloguj</button>
       </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>
