@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'surname', 'phone'];
+  displayedColumns: string[] = ['name', 'surname', 'phone',
+                                'companyname', 'nip', 'city',
+                                'postalcode', 'street', 'buildingnumber',
+                                'apartment' ];
   dataSource = [];
 
   constructor(private clientsService: ClientsService) {}

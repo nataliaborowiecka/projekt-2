@@ -73,6 +73,19 @@
       "surname": "eee",
       "phone": 111,
       "id": 7
+    },
+    {
+      "name": "aaaa",
+      "surname": "aaaa",
+      "phone": 667766,
+      "companyname": "aaaa",
+      "nip": 3333,
+      "city": "aaaa",
+      "postalcode": 43300,
+      "street": "sssss",
+      "buildingnumber": null,
+      "apartment": 111,
+      "id": 8
     }
   ]
 }

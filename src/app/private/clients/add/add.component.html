@@ -1,14 +1,35 @@
 <mat-card>
   <div>Dodaj klienta</div>
-  <form class="addform">
-    <mat-form-field [formGroup]="form">
+  <form class="addform" [formGroup]="form">
+    <mat-form-field >
       <input matInput placeholder="Imię" formControlName="name">
     </mat-form-field>
-    <mat-form-field [formGroup]="form">
+    <mat-form-field>
       <input matInput placeholder="Nazwisko" formControlName="surname">
     </mat-form-field>
-    <mat-form-field [formGroup]="form">
+    <mat-form-field >
       <input matInput type="number" placeholder="Numer telefonu" formControlName="phone">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nazwa firmy" formControlName="companyname">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Nip" formControlName="nip">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Miejscowość" formControlName="city">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Kod pocztowy" formControlName="postalcode">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Ulica" formControlName="street">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Numer domu" formControlName="bulidingnumber">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Numer mieszkania" formControlName="apartment">
     </mat-form-field>
     <button mat-raised-button class="button" (click)=save()>Dodaj</button>
   </form>

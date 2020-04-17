@@ -14,6 +14,13 @@ export class AddComponent implements OnInit {
     name: new FormControl(),
     surname: new FormControl(),
     phone: new FormControl(),
+    companyname: new FormControl(),
+    nip: new FormControl(),
+    city: new FormControl(),
+    postalcode: new FormControl(),
+    street: new FormControl(),
+    buildingnumber: new FormControl(),
+    apartment: new FormControl()
   });
 
   constructor(private clientsService: ClientsService,

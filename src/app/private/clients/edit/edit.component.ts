@@ -1,3 +1,4 @@
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
+  // form = new FormGroup({
+  //   id: new FormControl(null),
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
