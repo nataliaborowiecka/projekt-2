@@ -1,7 +1,7 @@
 import { ClientsService } from './../clients.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -11,8 +11,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class AddComponent implements OnInit {
   form = new FormGroup({
-    name: new FormControl(),
-    surname: new FormControl(),
+    name: new FormControl(null, [Validators.required]),
+    surname: new FormControl(null, [Validators.required]),
     phone: new FormControl(),
   });
 

@@ -1,15 +1,15 @@
 <mat-card>
   <div>Dodaj klienta</div>
-  <form class="addform">
-    <mat-form-field [formGroup]="form">
-      <input matInput placeholder="Imię" formControlName="name">
+  <form class="addform" [formGroup]="form">
+    <mat-form-field >
+      <input matInput placeholder="Imię" formControlName="name" required>
     </mat-form-field>
-    <mat-form-field [formGroup]="form">
-      <input matInput placeholder="Nazwisko" formControlName="surname">
+    <mat-form-field >
+      <input matInput placeholder="Nazwisko" formControlName="surname" required>
     </mat-form-field>
-    <mat-form-field [formGroup]="form">
+    <mat-form-field >
       <input matInput type="number" placeholder="Numer telefonu" formControlName="phone">
     </mat-form-field>
-    <button mat-raised-button class="button" (click)=save()>Dodaj</button>
+    <button mat-raised-button class="button" color="primary" [disabled]="!form.valid" (click)="save()">Dodaj</button>
   </form>
 </mat-card>

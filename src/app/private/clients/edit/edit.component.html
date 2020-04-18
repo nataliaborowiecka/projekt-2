@@ -1,1 +1,16 @@
-<p>edit works!</p>
+<mat-card>
+    <div>Dodaj klienta</div>
+    <form class="addform" [formGroup]="form">
+      <mat-form-field >
+        <input matInput placeholder="Imię" formControlName="name">
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Nazwisko" formControlName="surname">
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput type="number" placeholder="Numer telefonu" formControlName="phone">
+      </mat-form-field>
+      <button mat-raised-button class="button" (click)="save()">Zapisz</button>
+    </form>
+  </mat-card>
+  

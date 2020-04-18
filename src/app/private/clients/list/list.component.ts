@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'surname', 'phone'];
+  displayedColumns: string[] = ['name', 'surname', 'phone', 'action'];
   dataSource = [];
 
   constructor(private clientsService: ClientsService) {}
@@ -19,4 +19,9 @@ export class ListComponent implements OnInit {
       }
     );
   }
+
+  // Delete(id)
+  //  if // confirm() 
+  // True: polaczyl bym sie z BE => detelte(id) // komunikat ze sie udalo //  pobrac liste na nowo
+  // False: // TO nic..
 }

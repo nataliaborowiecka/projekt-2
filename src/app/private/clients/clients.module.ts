@@ -23,7 +23,7 @@ const Routes: Routes = [
     component: AddComponent,
   },
   {
-    path: 'edit',
+    path: 'edit/:id',
     component: EditComponent,
   },
   {
@@ -33,6 +33,10 @@ const Routes: Routes = [
 ];
 @NgModule({
   declarations: [EditComponent, AddComponent, ViewComponent, ListComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatInputModule, MatFormFieldModule, MatCardModule, MatIconModule, MatButtonModule, MatTableModule, RouterModule.forChild(Routes)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule, MatInputModule, MatFormFieldModule, MatCardModule,
+    MatIconModule, MatButtonModule, MatTableModule, RouterModule.forChild(Routes)],
 })
 export class ClientsModule {}

@@ -12,7 +12,17 @@ export class ClientsService {
     return this.http.get(`${environment.backendUrl}clients`);
   }
 
+  getClient(id) {
+    return this.http.get(`${environment.backendUrl}clients/${id}`);
+  }
+
   add(form) {
     return this.http.post(`${environment.backendUrl}clients`, form);
   }
+
+  edit(form) {
+    return this.http.put(`${environment.backendUrl}clients/${form.id}`, form);
+  }
+
+  //delete(id) http.delete  `${environment.backendUrl}clients/${id}`,
 }
