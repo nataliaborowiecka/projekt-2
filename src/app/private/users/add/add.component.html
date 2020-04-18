@@ -1,11 +1,17 @@
 <mat-card>
   <div>Dodaj użytkownika</div>
-  <form class="addForm">
-    <mat-form-field [formGroup]="form">
+  <form class="addForm" [formGroup]="form">
+    <mat-form-field>
       <input matInput placeholder="Imię" formControlName="name" />
     </mat-form-field>
-    <mat-form-field [formGroup]="form">
+    <mat-form-field>
       <input matInput placeholder="Nazwisko" formControlName="surname" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="login" formControlName="login" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Hasło" formControlName="password" type="password" />
     </mat-form-field>
     <button mat-raised-button (click)=save()>Dodaj</button>
   </form>

@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -14,5 +15,8 @@ export class ClientsService {
 
   add(form) {
     return this.http.post(`${environment.backendUrl}clients`, form);
+  }
+  delete(id) {
+    return this.http.delete(`${environment.backendUrl}clients/${id}`);
   }
 }

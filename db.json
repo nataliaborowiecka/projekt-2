@@ -29,15 +29,16 @@
       "name": "eeee",
       "surname": "eeee",
       "id": 6
+    },
+    {
+      "name": "natalia1",
+      "surname": "b1",
+      "login": "natalia",
+      "password": "natalia",
+      "id": 7
     }
   ],
   "clients": [
-    {
-      "id": 1,
-      "name": "admin1",
-      "surname": "admin1",
-      "phone": "123"
-    },
     {
       "id": 2,
       "name": "admin2",
@@ -67,12 +68,6 @@
       "surname": "fvdsvd",
       "phone": 1111,
       "id": 6
-    },
-    {
-      "name": "eeeee",
-      "surname": "eee",
-      "phone": 111,
-      "id": 7
     },
     {
       "name": "aaaa",

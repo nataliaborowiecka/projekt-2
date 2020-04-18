@@ -5,7 +5,7 @@
         <input matInput placeholder="Login" formControlName="login" />
       </mat-form-field>
       <mat-form-field [formGroup]="form">
-        <input matInput placeholder="Hasło" formControlName="password" />
+        <input matInput placeholder="Hasło" formControlName="password" type="password" />
       </mat-form-field>
     </form>
     <button mat-raised-button class="button" (click)="login()">Zaloguj</button>

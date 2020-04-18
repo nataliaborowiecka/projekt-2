@@ -13,6 +13,8 @@ export class AddComponent implements OnInit {
   form = new FormGroup({
     name: new FormControl(),
     surname: new FormControl(),
+    login: new FormControl(),
+    password: new FormControl(),
     id: new FormControl(),
   });
   constructor(

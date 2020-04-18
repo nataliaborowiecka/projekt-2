@@ -1,5 +1,7 @@
+import { element } from 'protractor';
 import { ClientsService } from './../clients.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -7,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'surname', 'phone',
+  displayedColumns: string[] = ['id', 'name', 'surname', 'phone',
                                 'companyname', 'nip', 'city',
                                 'postalcode', 'street', 'buildingnumber',
-                                'apartment' ];
+                                'apartment', 'actions'];
   dataSource = [];
 
-  constructor(private clientsService: ClientsService) {}
+  constructor(private clientsService: ClientsService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.clientsService.getClients().subscribe(
@@ -22,4 +25,23 @@ export class ListComponent implements OnInit {
       }
     );
   }
+  delete(id) {
+    if (confirm ('Czy chcesz usunąć klienta?')) {
+      this.clientsService.delete(id).subscribe( response => {
+        this.clientsService.getClients().subscribe(
+      (clientsList: any) => {
+        this.dataSource = clientsList;
+        this.router.navigate(['/app/clients'])})}
+      )
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
