@@ -2,13 +2,6 @@
   "users": [
     {
       "name": "natalka",
-      "surname": "borowiecka",
-      "login": "natalka",
-      "password": "natalka",
-      "id": 8
-    },
-    {
-      "name": "natalka",
       "surname": "fdcddds",
       "login": "wweerr",
       "password": "natalka",
@@ -36,12 +29,6 @@
       "phone": "12345"
     },
     {
-      "name": "bfdb",
-      "surname": "bfdb",
-      "phone": 3233,
-      "id": 4
-    },
-    {
       "id": 5,
       "name": "natalia",
       "surname": "fdwqdqw",
@@ -53,19 +40,6 @@
       "street": null,
       "buildingnumber": null,
       "apartment": null
-    },
-    {
-      "id": 6,
-      "name": "www",
-      "surname": "www",
-      "phone": 1111,
-      "companyname": "www",
-      "nip": 22,
-      "city": "www",
-      "postalcode": 222,
-      "street": "222",
-      "buildingnumber": 222,
-      "apartment": 222
     },
     {
       "name": "aaaa",
@@ -92,6 +66,32 @@
       "street": null,
       "buildingnumber": null,
       "apartment": null
+    },
+    {
+      "name": "kubarawr",
+      "surname": "qq",
+      "phone": 4324,
+      "companyname": null,
+      "nip": null,
+      "city": null,
+      "postalcode": null,
+      "street": null,
+      "buildingnumber": null,
+      "apartment": null,
+      "id": 10
+    },
+    {
+      "name": "vv",
+      "surname": "vv",
+      "phone": 323,
+      "companyname": null,
+      "nip": null,
+      "city": null,
+      "postalcode": null,
+      "street": null,
+      "buildingnumber": null,
+      "apartment": null,
+      "id": 11
     }
   ],
   "tickets": [
