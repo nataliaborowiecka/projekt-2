@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { ClientsService } from './../clients.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';

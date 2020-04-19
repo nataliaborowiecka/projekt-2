@@ -1,6 +1,11 @@
 <mat-sidenav-container class="container">
   <mat-sidenav class="menu" mode="side" opened>
-    <img src="https://bpc.pl/img/logo-footer.png" alt="logo" width="80" height="40">
+    <img
+      src="https://bpc.pl/img/logo-footer.png"
+      alt="logo"
+      width="80"
+      height="40"
+    />
     <button mat-raised-button [matMenuTriggerFor]="menu" class="usersbutton">
       Użytkownicy
     </button>
@@ -21,6 +26,17 @@
       </button>
       <button mat-menu-item [routerLink]="['/app/clients/add']">
         Dodaj klienta
+      </button>
+    </mat-menu>
+    <button mat-raised-button [matMenuTriggerFor]="menu3" class="ticketsbutton">
+      Bilety
+    </button>
+    <mat-menu #menu3="matMenu">
+      <button mat-menu-item [routerLink]="['/app/tickets']">
+        Lista biletów
+      </button>
+      <button mat-menu-item [routerLink]="['/app/tickets/add']">
+        Dodaj bilet
       </button>
     </mat-menu>
   </mat-sidenav>

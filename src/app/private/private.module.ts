@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 
+
 const routes: Routes = [
   {
     path: 'app',
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: 'clients',
         loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule)
+      },
+      {
+        path: 'tickets',
+        loadChildren: () => import('./tickets/tickets.module').then(m => m.TicketsModule)
       }
 
     ]

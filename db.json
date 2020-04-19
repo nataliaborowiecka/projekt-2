@@ -93,5 +93,13 @@
       "buildingnumber": null,
       "apartment": null
     }
+  ],
+  "tickets": [
+    {
+      "user": "natalia",
+      "client": "natalia",
+      "title": 123,
+      "description": "aaa"
+    }
   ]
 }
