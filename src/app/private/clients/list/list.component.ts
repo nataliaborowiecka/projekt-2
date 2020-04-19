@@ -9,39 +9,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'surname', 'phone',
-                                'companyname', 'nip', 'city',
-                                'postalcode', 'street', 'buildingnumber',
-                                'apartment', 'actions'];
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'surname',
+    'phone',
+    'companyname',
+    'nip',
+    'city',
+    'postalcode',
+    'street',
+    'buildingnumber',
+    'apartment',
+    'actions',
+  ];
   dataSource = [];
 
-  constructor(private clientsService: ClientsService,
-              private router: Router) {}
+  constructor(private clientsService: ClientsService, private router: Router) {}
 
   ngOnInit(): void {
-    this.clientsService.getClients().subscribe(
-      (clientsList: any) => {
-        this.dataSource = clientsList;
-      }
-    );
+    this.clientsService.getClients().subscribe((clientsList: any) => {
+      this.dataSource = clientsList;
+    });
   }
   delete(id) {
-    if (confirm ('Czy chcesz usunąć klienta?')) {
-      this.clientsService.delete(id).subscribe( response => {
-        this.clientsService.getClients().subscribe(
-      (clientsList: any) => {
-        this.dataSource = clientsList;
-        this.router.navigate(['/app/clients'])})}
-      )
+    if (confirm('Czy chcesz usunąć klienta?')) {
+      this.clientsService.delete(id).subscribe((response) => {
+        this.clientsService.getClients().subscribe((clientsList: any) => {
+          this.dataSource = clientsList;
+          this.router.navigate(['/app/clients']);
+        });
+      });
     }
   }
 }
-
-
-
-
-
-
-
-
-

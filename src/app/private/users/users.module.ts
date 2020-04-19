@@ -13,25 +13,24 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-
 const routes: Routes = [
- {
-   path: '',
-   component: ListComponent
- },
- {
-   path: 'edit',
-   component: EditComponent
- },
- {
-   path: 'view',
-   component: ViewComponent
- },
- {
-   path: 'add',
-   component: AddComponent
- }
-]
+  {
+    path: '',
+    component: ListComponent,
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent,
+  },
+  {
+    path: 'view',
+    component: ViewComponent,
+  },
+  {
+    path: 'add',
+    component: AddComponent,
+  },
+];
 @NgModule({
   declarations: [AddComponent, EditComponent, ListComponent, ViewComponent],
   imports: [
@@ -44,7 +43,7 @@ const routes: Routes = [
     MatButtonModule,
     RouterModule.forChild(routes),
     MatTableModule,
-    MatCardModule
-  ]
+    MatCardModule,
+  ],
 })
-export class UsersModule { }
+export class UsersModule {}

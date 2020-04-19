@@ -1,1 +1,24 @@
-<p>edit edit edit edit</p>
+<mat-card>
+  <form class="addForm" [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="Imię" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nazwisko" formControlName="surname" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="login" formControlName="login" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Hasło"
+        formControlName="password"
+        type="password"
+      />
+    </mat-form-field>
+    <button mat-raised-button [disabled]="!form.valid" (click)="save()">
+      Dodaj
+    </button>
+  </form>
+</mat-card>

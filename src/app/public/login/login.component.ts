@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   login() {
-    console.log('działa', this.form.value.login);
     this.publicService
       .getUserlist()
       .subscribe((listOfUsersFromBackend: any) => {
@@ -45,4 +44,5 @@ export class LoginComponent implements OnInit {
         }
       });
   }
+  
 }

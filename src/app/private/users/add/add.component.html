@@ -11,8 +11,15 @@
       <input matInput placeholder="login" formControlName="login" />
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Hasło" formControlName="password" type="password" />
+      <input
+        matInput
+        placeholder="Hasło"
+        formControlName="password"
+        type="password"
+      />
     </mat-form-field>
-    <button mat-raised-button (click)=save()>Dodaj</button>
+    <button mat-raised-button [disabled]="!form.valid" (click)="save()">
+      Dodaj
+    </button>
   </form>
 </mat-card>

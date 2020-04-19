@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { UsersService } from './../users.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -11,10 +11,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class AddComponent implements OnInit {
   form = new FormGroup({
-    name: new FormControl(),
-    surname: new FormControl(),
-    login: new FormControl(),
-    password: new FormControl(),
+    name: new FormControl(null, [Validators.required]),
+    surname: new FormControl(null, [Validators.required]),
+    login: new FormControl(null, [Validators.required]),
+    password: new FormControl(null, [Validators.required]),
     id: new FormControl(),
   });
   constructor(
@@ -25,7 +25,6 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {}
   save() {
-    console.log('dodano poprawnie');
     this.userService.add(this.form.value).subscribe((response) => {
       this.snackBar.open('Dodano użytkownika', '', {
         duration: 2000,

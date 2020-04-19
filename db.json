@@ -1,41 +1,25 @@
 {
   "users": [
     {
-      "id": 1,
-      "login": "admin1",
-      "password": "admin1"
+      "name": "natalka",
+      "surname": "borowiecka",
+      "login": "natalka",
+      "password": "natalka",
+      "id": 8
     },
     {
-      "id": 2,
-      "login": "admin2",
-      "password": "admin2"
+      "name": "natalka",
+      "surname": "fdcddds",
+      "login": "wweerr",
+      "password": "natalka",
+      "id": 9
     },
     {
-      "id": 3,
-      "login": "admin3",
-      "password": "admin3"
-    },
-    {
-      "name": "natalia",
-      "surname": "bbb",
-      "id": 4
-    },
-    {
-      "name": "qqqq",
-      "surname": "qqqq",
-      "id": 5
-    },
-    {
-      "name": "eeee",
-      "surname": "eeee",
-      "id": 6
-    },
-    {
-      "name": "natalia1",
-      "surname": "b1",
-      "login": "natalia",
-      "password": "natalia",
-      "id": 7
+      "name": "natalka",
+      "surname": "borowiecka",
+      "login": "natalka",
+      "password": "natalka",
+      "id": 10
     }
   ],
   "clients": [
@@ -58,16 +42,30 @@
       "id": 4
     },
     {
+      "id": 5,
       "name": "natalia",
-      "surname": "vdvsdvs",
-      "phone": 533333,
-      "id": 5
+      "surname": "fdwqdqw",
+      "phone": 55555,
+      "companyname": null,
+      "nip": null,
+      "city": null,
+      "postalcode": null,
+      "street": null,
+      "buildingnumber": null,
+      "apartment": null
     },
     {
-      "name": "mmmmm",
-      "surname": "fvdsvd",
+      "id": 6,
+      "name": "www",
+      "surname": "www",
       "phone": 1111,
-      "id": 6
+      "companyname": "www",
+      "nip": 22,
+      "city": "www",
+      "postalcode": 222,
+      "street": "222",
+      "buildingnumber": 222,
+      "apartment": 222
     },
     {
       "name": "aaaa",
@@ -81,6 +79,19 @@
       "buildingnumber": null,
       "apartment": 111,
       "id": 8
+    },
+    {
+      "id": 9,
+      "name": "hrhd",
+      "surname": "hdghdrf",
+      "phone": 321,
+      "companyname": null,
+      "nip": null,
+      "city": null,
+      "postalcode": null,
+      "street": null,
+      "buildingnumber": null,
+      "apartment": null
     }
   ]
 }
