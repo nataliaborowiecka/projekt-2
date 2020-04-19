@@ -1,1 +1,30 @@
-
+<mat-card>
+  <div>Dodaj bilet</div>
+  <form class="addform" [formGroup]="form">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Użytkownik"
+        formControlName="user"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Klient" formControlName="client" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tytuł" formControlName="title" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Opis" formControlName="description" />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      class="button"
+      [disabled]="!form.valid"
+      (click)="save()"
+    >
+      Zapisz
+    </button>
+  </form>
+</mat-card>

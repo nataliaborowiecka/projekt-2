@@ -1,3 +1,5 @@
+import { TicketsService } from './../tickets.service';
+import { TicketsModule } from './../tickets.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   displayedColumns: string[] = ['user', 'client', 'title', 'description'];
   dataSource = [];
-  constructor() {}
+  constructor(private ticketsService: TicketsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.ticketsService.getTickets().subscribe((ticketsList: any) => {
+      this.dataSource = ticketsList;
+    });
+
+}
 }
