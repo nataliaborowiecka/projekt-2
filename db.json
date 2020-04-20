@@ -6,6 +6,20 @@
       "surname": "bbb",
       "login": "admin",
       "password": "admin"
+    },
+    {
+      "name": "michal",
+      "surname": "michal",
+      "login": "michal@centrum9.pl",
+      "password": "Qwer12345",
+      "id": 10
+    },
+    {
+      "name": "xxxx",
+      "surname": "yyy",
+      "login": "michal@centrum9.pl",
+      "password": "Qwer12345",
+      "id": 11
     }
   ],
   "clients": [
@@ -70,10 +84,18 @@
   ],
   "tickets": [
     {
-      "user": "natalia",
-      "client": "natalia",
-      "title": 123,
-      "description": "aaa"
+      "id": 1,
+      "client": "www",
+      "title": "qqq",
+      "description": "eee",
+      "status": "IN_PROGRESS",
+      "user": {
+        "name": "xxxx",
+        "surname": "yyy",
+        "login": "michal@centrum9.pl",
+        "password": "Qwer12345",
+        "id": 11
+      }
     }
   ]
 }

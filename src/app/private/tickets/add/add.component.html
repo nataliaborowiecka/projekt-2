@@ -2,13 +2,15 @@
   <div>Dodaj bilet</div>
   <form class="addform" [formGroup]="form">
     <mat-form-field>
-      <input
-        matInput
-        placeholder="Użytkownik"
-        formControlName="user"
-        required
-      />
+      <mat-label>Wybierz uytkownika</mat-label>
+      <mat-select formControlName="user" >
+        <mat-option *ngFor="let user of users" [value]="user">
+          {{user.name}} {{user.surname}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
+
+
     <mat-form-field>
       <input matInput placeholder="Klient" formControlName="client" required />
     </mat-form-field>

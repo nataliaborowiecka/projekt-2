@@ -6,40 +6,33 @@
       width="150"
       height="75"
     />
-    <button mat-raised-button [matMenuTriggerFor]="menu" class="usersbutton">
-      Użytkownicy
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['/app/users']">
-        Lista użytkowników
-      </button>
-      <button mat-menu-item [routerLink]="['/app/users/add']">
-        Dodaj użytkownika
-      </button>
-    </mat-menu>
-    <button mat-raised-button [matMenuTriggerFor]="menu2" class="clientsbutton">
-      Klienci
-    </button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item [routerLink]="['/app/clients']">
-        Lista klientów
-      </button>
-      <button mat-menu-item [routerLink]="['/app/clients/add']">
-        Dodaj klienta
-      </button>
-    </mat-menu>
-    <button mat-raised-button [matMenuTriggerFor]="menu3" class="ticketsbutton">
-      Bilety
-    </button>
-    <mat-menu #menu3="matMenu">
-      <button mat-menu-item [routerLink]="['/app/tickets']">
-        Lista biletów
-      </button>
-      <button mat-menu-item [routerLink]="['/app/tickets/add']">
-        Dodaj bilet
-      </button>
-    </mat-menu>
-  </mat-sidenav>
+    <ul>
+      <li><strong>Uzytkownicy</strong></li>
+      <li>
+        <a [routerLink]="['/app/users']">Lista</a>
+      </li>
+      <li>
+        <a [routerLink]="['/app/users/add']">Dodaj</a>
+      </li>
+      <li><strong>Klienci</strong></li>
+
+      <li>
+        <a [routerLink]="['/app/clients']">Lista</a>
+      </li>
+      <li>
+        <a [routerLink]="['/app/clients/add']">Dodaj</a>
+      </li>
+      <li><strong>Zgloszenia</strong></li>
+
+      <li>
+        <a [routerLink]="['/app/tickets']">Lista</a>
+      </li>
+      <li>
+        <a [routerLink]="['/app/tickets/add']">Dodaj</a>
+      </li>
+    </ul>
+   
+    </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">
       <span class="spacer"></span>

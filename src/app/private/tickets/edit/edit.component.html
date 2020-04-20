@@ -1,21 +1,50 @@
-<mat-card>
-  <div>Dodaj bilet</div>
-  <form class="addform" [formGroup]="form">
-    <mat-form-field>
-      <input matInput placeholder="Użytkownik" formControlName="user" required />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Klient" formControlName="client" required />
-    </mat-form-field>
+<form class="addform" [formGroup]="form">
+  <mat-card>
+    <div>Dane klienta</div>
+
+      <mat-form-field>
+        <input matInput placeholder="Klient" formControlName="client" required />
+      </mat-form-field>
+     
+    
+  
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Dane o userze</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      Imię: {{ticket?.user?.name}} <br />
+      Nazwisko: {{ticket?.user?.surname}} <br />
+      Login: {{ticket?.user?.login}} <br />
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Dodatkowe informacje</mat-card-title>
+    </mat-card-header>
     <mat-form-field>
       <input matInput placeholder="Tytuł" formControlName="title" required />
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Opis" formControlName="description" />
     </mat-form-field>
-    <button mat-raised-button class="button" [disabled]="!form.valid" (click)="save()">
-      Zapisz
-    </button>
-  </form>
-</mat-card>
+  </mat-card>
 
+  <mat-card>
+    <div>Status i inne</div>
+    <mat-form-field>
+      <mat-label>Wybierz status</mat-label>
+      <mat-select formControlName="status" >
+        <mat-option *ngFor="let status of TicketStatus | keyvalue" [value]="status.key">
+          {{status.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+
+  <button mat-raised-button class="button" [disabled]="!form.valid" (click)="save()">
+    Zapisz
+  </button>
+</form>

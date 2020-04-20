@@ -3,7 +3,7 @@ import { ClientsService } from './../../clients/clients.service';
 import { TicketsService } from './../tickets.service';
 import { TicketsModule } from './../tickets.module';
 import { Component, OnInit } from '@angular/core';
-
+import { TicketStatus } from '../ticket.type';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -14,10 +14,11 @@ export class ListComponent implements OnInit {
     'user',
     'client',
     'title',
-    'description',
+    'status',
     'actions',
   ];
   dataSource = [];
+  TicketStatus = TicketStatus;
   constructor(private ticketsService: TicketsService, private router: Router) {}
 
   ngOnInit(): void {

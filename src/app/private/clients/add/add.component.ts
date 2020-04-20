@@ -4,6 +4,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+
+// 1. Dodac zmiena isCompany = false
+// 2. Funkcje o nazwie userSelectInput
+// ktora bedzie: this.isCompany = !this.isCompany;
+
+/// const ! nie wolno zmieniac wartosci 
+/// zmiennna = wartosc
+
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
