@@ -1,10 +1,10 @@
 <mat-card>
   <form class="editform" [formGroup]="form">
     <mat-form-field>
-      <input matInput placeholder="Imię" formControlName="name" />
+      <input matInput placeholder="Imię" formControlName="name" required/>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Nazwisko" formControlName="surname" />
+      <input matInput placeholder="Nazwisko" formControlName="surname" required />
     </mat-form-field>
     <mat-form-field>
       <input
@@ -12,6 +12,7 @@
         type="number"
         placeholder="Numer telefonu"
         formControlName="phone"
+        required
       />
     </mat-form-field>
     <mat-form-field>

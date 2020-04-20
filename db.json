@@ -1,18 +1,11 @@
 {
   "users": [
     {
+      "id": 9,
       "name": "natalka",
-      "surname": "fdcddds",
-      "login": "wweerr",
-      "password": "natalka",
-      "id": 9
-    },
-    {
-      "name": "natalka",
-      "surname": "borowiecka",
-      "login": "natalka",
-      "password": "natalka",
-      "id": 10
+      "surname": "bbb",
+      "login": "admin",
+      "password": "admin"
     }
   ],
   "clients": [
@@ -21,12 +14,6 @@
       "name": "admin2",
       "surname": "admin2",
       "phone": "1234"
-    },
-    {
-      "id": 3,
-      "name": "admin3",
-      "surname": "admin3",
-      "phone": "12345"
     },
     {
       "id": 5,
@@ -42,6 +29,7 @@
       "apartment": null
     },
     {
+      "id": 8,
       "name": "aaaa",
       "surname": "aaaa",
       "phone": 667766,
@@ -51,8 +39,7 @@
       "postalcode": 43300,
       "street": "sssss",
       "buildingnumber": null,
-      "apartment": 111,
-      "id": 8
+      "apartment": 33322
     },
     {
       "id": 9,
@@ -79,19 +66,6 @@
       "buildingnumber": null,
       "apartment": null,
       "id": 10
-    },
-    {
-      "name": "vv",
-      "surname": "vv",
-      "phone": 323,
-      "companyname": null,
-      "nip": null,
-      "city": null,
-      "postalcode": null,
-      "street": null,
-      "buildingnumber": null,
-      "apartment": null,
-      "id": 11
     }
   ],
   "tickets": [

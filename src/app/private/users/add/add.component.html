@@ -2,13 +2,13 @@
   <div>Dodaj użytkownika</div>
   <form class="addForm" [formGroup]="form">
     <mat-form-field>
-      <input matInput placeholder="Imię" formControlName="name" />
+      <input matInput placeholder="Imię" formControlName="name" required/>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Nazwisko" formControlName="surname" />
+      <input matInput placeholder="Nazwisko" formControlName="surname" required/>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="login" formControlName="login" />
+      <input matInput placeholder="login" formControlName="login" required/>
     </mat-form-field>
     <mat-form-field>
       <input
@@ -16,6 +16,7 @@
         placeholder="Hasło"
         formControlName="password"
         type="password"
+        required
       />
     </mat-form-field>
     <button mat-raised-button [disabled]="!form.valid" (click)="save()">
