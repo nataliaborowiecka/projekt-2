@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
     });
   }
   delete(id) {
-    if (confirm('Czy chcesz usunąć bilet?')) {
+    if (confirm('Czy chcesz usunąć zgłoszenie?')) {
       this.ticketsService.delete(id).subscribe((response) => {
         this.ticketsService.getTickets().subscribe((ticketslist: any) => {
           this.dataSource = ticketslist;

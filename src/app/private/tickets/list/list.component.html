@@ -1,12 +1,12 @@
 <table mat-table [dataSource]="dataSource" class="table">
   <ng-container matColumnDef="user">
     <th mat-header-cell *matHeaderCellDef>Użytkownik</th>
-    <td mat-cell *matCellDef="let element">{{ element.user }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.user?.name }} {{ element.user?.surname }}</td>
   </ng-container>
 
   <ng-container matColumnDef="client">
     <th mat-header-cell *matHeaderCellDef>Klient</th>
-    <td mat-cell *matCellDef="let element">{{ element.client }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.client?.name }} {{ element.client?.surname }}</td>
   </ng-container>
 
   <ng-container matColumnDef="title">

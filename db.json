@@ -6,6 +6,20 @@
       "surname": "bbb",
       "login": "admin",
       "password": "admin"
+    },
+    {
+      "name": "qwe",
+      "surname": "qwe",
+      "login": "qwe",
+      "password": "qwe",
+      "id": 10
+    },
+    {
+      "name": "rty",
+      "surname": "tyy",
+      "login": "rty",
+      "password": "rty",
+      "id": 11
     }
   ],
   "clients": [
@@ -70,10 +84,54 @@
   ],
   "tickets": [
     {
-      "user": "natalia",
-      "client": "natalia",
-      "title": 123,
-      "description": "aaa"
+      "user": {
+        "name": "qwe",
+        "surname": "qwe",
+        "login": "qwe",
+        "password": "qwe",
+        "id": 10
+      },
+      "client": {
+        "id": 5,
+        "name": "natalia",
+        "surname": "fdwqdqw",
+        "phone": 55555,
+        "companyname": null,
+        "nip": null,
+        "city": null,
+        "postalcode": null,
+        "street": null,
+        "buildingnumber": null,
+        "apartment": null
+      },
+      "title": "natalia",
+      "description": null,
+      "id": 4
+    },
+    {
+      "user": {
+        "name": "rty",
+        "surname": "tyy",
+        "login": "rty",
+        "password": "rty",
+        "id": 11
+      },
+      "client": {
+        "name": "kubarawr",
+        "surname": "qq",
+        "phone": 4324,
+        "companyname": null,
+        "nip": null,
+        "city": null,
+        "postalcode": null,
+        "street": null,
+        "buildingnumber": null,
+        "apartment": null,
+        "id": 10
+      },
+      "title": "natalia",
+      "description": "ad",
+      "id": 5
     }
   ]
 }

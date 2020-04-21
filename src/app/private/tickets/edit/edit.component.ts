@@ -19,6 +19,7 @@ export class EditComponent implements OnInit {
     title: new FormControl(null, [Validators.required]),
     description: new FormControl(),
   });
+  ticket;
   constructor(
     private router: Router,
     private ticketsService: TicketsService,
@@ -31,11 +32,17 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.ticketsService.getTicket(this.id).subscribe((ticket) => {
       this.form.patchValue(ticket);
+      this.ticket = ticket;
     });
   }
   save() {
-    this.ticketsService.edit(this.form.value).subscribe(() => {
-      this.snackBar.open('Zapisano bilet', '', {
+    const dataToSave = {
+      ...this.form.value,
+      user: this.ticket.user,
+      client: this.ticket.client,
+    };
+    this.ticketsService.edit(dataToSave).subscribe(() => {
+      this.snackBar.open('Zapisano zgłoszenie', '', {
         duration: 2000,
       });
       this.router.navigate(['app/tickets']);

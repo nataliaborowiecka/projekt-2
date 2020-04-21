@@ -1,3 +1,5 @@
+import { ClientsService } from './../../clients/clients.service';
+import { UsersService } from './../../users/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { TicketsService } from './../tickets.service';
@@ -16,18 +18,29 @@ export class AddComponent implements OnInit {
     title: new FormControl(null, [Validators.required]),
     description: new FormControl(),
   });
+  users = [];
+  clients = [];
 
   constructor(
     private ticketsService: TicketsService,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private usersService: UsersService,
+    private clientsService: ClientsService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.usersService.getUsers().subscribe(
+      (listOfUsers: any) => this.users = listOfUsers
+    );
+    this.clientsService.getClients().subscribe(
+      (listOfClients: any) => this.clients = listOfClients
+    )
+  }
   save() {
     this.ticketsService.add(this.form.value).subscribe((response) => {
       this.router.navigate(['/app/tickets']);
-      this.snackBar.open('Dodano bilet', '', {
+      this.snackBar.open('Dodano zgłoszenie', '', {
         duration: 2000,
       });
     });
