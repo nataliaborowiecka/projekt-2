@@ -23,6 +23,14 @@
     <mat-form-field>
       <input matInput placeholder="Opis" formControlName="description" />
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>Wybierz status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let status of TicketStatus | keyvalue" [value]="status.key">
+          {{ status.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     <button
       mat-raised-button
       class="button"

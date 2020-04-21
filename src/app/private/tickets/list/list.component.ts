@@ -1,3 +1,4 @@
+import { TicketStatus } from './../ticket.type';
 import { Router } from '@angular/router';
 import { ClientsService } from './../../clients/clients.service';
 import { TicketsService } from './../tickets.service';
@@ -14,10 +15,11 @@ export class ListComponent implements OnInit {
     'user',
     'client',
     'title',
-    'description',
+    'status',
     'actions',
   ];
   dataSource = [];
+  TicketStatus = TicketStatus;
   constructor(private ticketsService: TicketsService, private router: Router) {}
 
   ngOnInit(): void {

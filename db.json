@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 9,
-      "name": "natalka",
-      "surname": "bbb",
-      "login": "admin",
-      "password": "admin"
-    },
-    {
       "name": "qwe",
       "surname": "qwe",
       "login": "qwe",
@@ -20,6 +13,20 @@
       "login": "rty",
       "password": "rty",
       "id": 11
+    },
+    {
+      "name": "natalia",
+      "surname": "borowiecka",
+      "login": "natalka",
+      "password": "admin",
+      "id": 12
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaaaa",
+      "login": "aaaaa",
+      "password": "admin",
+      "id": 13
     }
   ],
   "clients": [
@@ -80,22 +87,36 @@
       "buildingnumber": null,
       "apartment": null,
       "id": 10
+    },
+    {
+      "name": "aaaaa",
+      "surname": "aaaaa",
+      "phone": 111,
+      "companyname": null,
+      "nip": null,
+      "city": null,
+      "postalcode": null,
+      "street": null,
+      "buildingnumber": null,
+      "apartment": null,
+      "id": 11
     }
   ],
   "tickets": [
     {
+      "id": 4,
       "user": {
-        "name": "qwe",
-        "surname": "qwe",
-        "login": "qwe",
-        "password": "qwe",
-        "id": 10
+        "name": "rty",
+        "surname": "tyy",
+        "login": "rty",
+        "password": "rty",
+        "id": 11
       },
       "client": {
-        "id": 5,
-        "name": "natalia",
-        "surname": "fdwqdqw",
-        "phone": 55555,
+        "id": 9,
+        "name": "hrhd",
+        "surname": "hdghdrf",
+        "phone": 321,
         "companyname": null,
         "nip": null,
         "city": null,
@@ -105,10 +126,10 @@
         "apartment": null
       },
       "title": "natalia",
-      "description": null,
-      "id": 4
+      "description": null
     },
     {
+      "id": 5,
       "user": {
         "name": "rty",
         "surname": "tyy",
@@ -130,8 +151,58 @@
         "id": 10
       },
       "title": "natalia",
-      "description": "ad",
-      "id": 5
+      "status": "CLOSED"
+    },
+    {
+      "id": 6,
+      "user": {
+        "name": "natalia",
+        "surname": "borowiecka",
+        "login": "natalka",
+        "password": "admin",
+        "id": 12
+      },
+      "client": {
+        "id": 5,
+        "name": "natalia",
+        "surname": "fdwqdqw",
+        "phone": 55555,
+        "companyname": null,
+        "nip": null,
+        "city": null,
+        "postalcode": null,
+        "street": null,
+        "buildingnumber": null,
+        "apartment": null
+      },
+      "title": "projekt",
+      "status": "NEW"
+    },
+    {
+      "user": {
+        "name": "rty",
+        "surname": "tyy",
+        "login": "rty",
+        "password": "rty",
+        "id": 11
+      },
+      "client": {
+        "id": 5,
+        "name": "natalia",
+        "surname": "fdwqdqw",
+        "phone": 55555,
+        "companyname": null,
+        "nip": null,
+        "city": null,
+        "postalcode": null,
+        "street": null,
+        "buildingnumber": null,
+        "apartment": null
+      },
+      "title": "natalia",
+      "description": null,
+      "status": "IN_PROGRESS",
+      "id": 7
     }
   ]
 }

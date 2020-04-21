@@ -22,6 +22,7 @@ export class AddComponent implements OnInit {
     buildingnumber: new FormControl(),
     apartment: new FormControl(),
   });
+  isCompany = false;
 
   constructor(
     private clientsService: ClientsService,
@@ -37,5 +38,8 @@ export class AddComponent implements OnInit {
         duration: 2000,
       });
     });
+  }
+  userSelectInput() {
+    this.isCompany = !this.isCompany;
   }
 }

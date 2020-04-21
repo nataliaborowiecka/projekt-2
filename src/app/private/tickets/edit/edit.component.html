@@ -1,5 +1,5 @@
 <form class="addform" [formGroup]="form">
-  <mat-card>
+  <mat-card class="clientcard">
     <mat-card-header>
       <mat-card-title>Dane klienta</mat-card-title>
     </mat-card-header>
@@ -9,11 +9,18 @@
     </mat-card-content>
 
     <mat-form-field>
-      <input matInput placeholder="Klient" formControlName="client" required />
+      <mat-label
+        >{{ ticket?.client?.name }} {{ ticket?.client?.surname }}
+      </mat-label>
+      <mat-select formControlName="client">
+        <mat-option *ngFor="let client of clients" [value]="client">
+          {{ client.name }} {{ client.surname }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
   </mat-card>
 
-  <mat-card>
+  <mat-card class="usercard">
     <mat-card-header>
       <mat-card-title>Dane użytkownika</mat-card-title>
     </mat-card-header>
@@ -24,21 +31,47 @@
     </mat-card-content>
 
     <mat-form-field>
-      <input
-        matInput
-        placeholder="Użytkownik"
-        formControlName="user"
-        required
-      />
+      <mat-label
+        >{{ ticket?.user?.name }} {{ ticket?.user?.surname }}
+      </mat-label>
+      <mat-select formControlName="user">
+        <mat-option *ngFor="let user of users" [value]="user">
+          {{ user.name }} {{ user.surname }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
   </mat-card>
 
-  <mat-form-field>
-    <input matInput placeholder="Tytuł" formControlName="title" required />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Opis" formControlName="description" />
-  </mat-form-field>
+  <mat-card class="infocard">
+    <mat-card-header>
+      <mat-card-title>Dodatkowe informacje</mat-card-title>
+    </mat-card-header>
+    <mat-form-field>
+      <input matInput placeholder="Tytuł" formControlName="title" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Opis" formControlName="description" />
+    </mat-form-field>
+  </mat-card>
+
+  <mat-card class="statuscard">
+    <mat-card-header>
+      <mat-card-title>Status i inne</mat-card-title>
+    </mat-card-header>
+    <mat-form-field>
+      <mat-label>Wybierz status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option
+          *ngFor="let status of TicketStatus | keyvalue"
+          [value]="status.key"
+        >
+          {{ status.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+</form>
+<mat-toolbar class="toolbar">
   <button
     mat-raised-button
     class="button"
@@ -47,4 +80,4 @@
   >
     Zapisz
   </button>
-</form>
+</mat-toolbar>

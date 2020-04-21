@@ -1,3 +1,4 @@
+import { TicketStatus } from './../ticket.type';
 import { ClientsService } from './../../clients/clients.service';
 import { UsersService } from './../../users/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -17,9 +18,11 @@ export class AddComponent implements OnInit {
     client: new FormControl(null, [Validators.required]),
     title: new FormControl(null, [Validators.required]),
     description: new FormControl(),
+    status: new FormControl(),
   });
   users = [];
   clients = [];
+  TicketStatus = TicketStatus;
 
   constructor(
     private ticketsService: TicketsService,

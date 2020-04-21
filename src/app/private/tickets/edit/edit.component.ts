@@ -1,3 +1,7 @@
+import { ClientsService } from './../../clients/clients.service';
+import { TicketStatus } from './../ticket.type';
+
+import { UsersService } from './../../users/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TicketsService } from './../tickets.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -17,14 +21,20 @@ export class EditComponent implements OnInit {
     user: new FormControl(null, [Validators.required]),
     client: new FormControl(null, [Validators.required]),
     title: new FormControl(null, [Validators.required]),
-    description: new FormControl(),
+    status: new FormControl()
   });
   ticket;
+  TicketStatus = TicketStatus;
+  users = [];
+  clients = [];
+
   constructor(
     private router: Router,
     private ticketsService: TicketsService,
     private snackBar: MatSnackBar,
-    private acRouter: ActivatedRoute
+    private acRouter: ActivatedRoute,
+    private usersService: UsersService,
+    private clientsService: ClientsService
   ) {
     this.id = this.acRouter.snapshot.params.id;
   }
@@ -33,13 +43,17 @@ export class EditComponent implements OnInit {
     this.ticketsService.getTicket(this.id).subscribe((ticket) => {
       this.form.patchValue(ticket);
       this.ticket = ticket;
+      this.usersService
+        .getUsers()
+        .subscribe((listOfUsers: any) => (this.users = listOfUsers));
+      this.clientsService
+        .getClients()
+        .subscribe((listOfClients: any) => (this.clients = listOfClients));
     });
   }
   save() {
     const dataToSave = {
       ...this.form.value,
-      user: this.ticket.user,
-      client: this.ticket.client,
     };
     this.ticketsService.edit(dataToSave).subscribe(() => {
       this.snackBar.open('Zapisano zgłoszenie', '', {
