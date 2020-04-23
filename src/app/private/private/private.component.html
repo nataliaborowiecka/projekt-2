@@ -6,45 +6,34 @@
       width="150"
       height="75"
     />
-    <ul>
-      <li><strong>Użytkownicy</strong></li>
-      <li>
-        <a [routerLink]="['/app/users']"
-      </li>
-    </ul>
-    <button mat-raised-button [matMenuTriggerFor]="menu" class="usersbutton">
-      Użytkownicy
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['/app/users']">
-        Lista użytkowników
-      </button>
-      <button mat-menu-item [routerLink]="['/app/users/add']">
-        Dodaj użytkownika
-      </button>
-    </mat-menu>
-    <button mat-raised-button [matMenuTriggerFor]="menu2" class="clientsbutton">
-      Klienci
-    </button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item [routerLink]="['/app/clients']">
-        Lista klientów
-      </button>
-      <button mat-menu-item [routerLink]="['/app/clients/add']">
-        Dodaj klienta
-      </button>
-    </mat-menu>
-    <button mat-raised-button [matMenuTriggerFor]="menu3" class="ticketsbutton">
-      Zgłoszenia
-    </button>
-    <mat-menu #menu3="matMenu">
-      <button mat-menu-item [routerLink]="['/app/tickets']">
-        Lista zgłoszeń
-      </button>
-      <button mat-menu-item [routerLink]="['/app/tickets/add']">
-        Dodaj zgłoszenie
-      </button>
-    </mat-menu>
+
+    <mat-list role="list" class="list">
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/users']">Użytkownicy</a>
+        <mat-icon>person</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/users/add']">Dodaj użytkownika</a>
+        <mat-icon>add</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/clients']">Klienci</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/clients/add']">Dodaj klienta</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/tickets']">Zgłoszenia</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <a matLine [routerLink]="['/app/tickets/add']">Dodaj zgłoszenie</a>
+      </mat-list-item>
+    </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">

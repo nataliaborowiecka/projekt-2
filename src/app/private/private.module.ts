@@ -7,6 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatSidenavModule,
     MatToolbarModule,
+    MatListModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule
