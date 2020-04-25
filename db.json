@@ -126,7 +126,7 @@
         "apartment": null
       },
       "title": "natalia",
-      "description": null
+      "status": "IN_PROGRESS"
     },
     {
       "id": 5,
@@ -199,6 +199,30 @@
         "buildingnumber": null,
         "apartment": null
       },
+      "comments": [
+        {
+          "date": "12/12/2021",
+          "user": {
+            "name": "rty",
+            "surname": "tyy",
+            "login": "rty",
+            "password": "rty",
+            "id": 11
+          },
+          "description": "Super Opis 123"
+        },
+        {
+          "date": "12/13/2021",
+          "user": {
+            "name": "rty",
+            "surname": "tyy",
+            "login": "rty",
+            "password": "rty",
+            "id": 11
+          },
+          "description": "Super Opis 1234"
+        }
+      ],
       "title": "natalia",
       "description": null,
       "status": "IN_PROGRESS",

@@ -37,4 +37,12 @@ export class ListComponent implements OnInit {
       });
     }
   }
+
+  selectColor(color) {
+    if (color === 'CLOSED') {
+      return 'warn';
+    } else {
+      return '';
+    }
+  }
 }

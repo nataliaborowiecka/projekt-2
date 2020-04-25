@@ -63,12 +63,26 @@
       <mat-select formControlName="status">
         <mat-option
           *ngFor="let status of TicketStatus | keyvalue"
-          [value]="status.key"
-        >
+          [value]="status.key">
           {{ status.value }}
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <hr>
+    <strong>Komentarze</strong>
+    <table>
+      <tr>
+        <td>Data</td>
+        <td>Uzytkownik</td>
+        <td>Tresc</td>
+      </tr>
+      <tr *ngFor="let comment of comments">
+        <td>{{comment.date }}</td>
+        <td>{{comment.user?.name }}</td>
+        <td>{{comment.description}}</td>
+      </tr>
+      
+    </table>
   </mat-card>
 </form>
 <mat-toolbar class="toolbar">
