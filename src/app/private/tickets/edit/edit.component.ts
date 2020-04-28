@@ -21,6 +21,7 @@ export class EditComponent implements OnInit {
   form = new FormGroup({
     id: new FormControl(null),
     user: new FormControl(null, [Validators.required]),
+    description: new FormControl(null),
     client: new FormControl(null, [Validators.required]),
     title: new FormControl(null, [Validators.required]),
     status: new FormControl(),

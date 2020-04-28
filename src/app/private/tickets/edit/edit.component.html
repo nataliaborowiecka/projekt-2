@@ -78,8 +78,19 @@
   <tr *ngFor="let comment of comments">
     <td>{{comment.date}}</td>
     <td>{{comment.user?.name}}</td>
-    <td>{{comment.description}}</td>
+    <td>{{comment?.description}}</td>
+    <td>Edycja</td>
   </tr>
+  <!-- 1. Przycisk do dowania komentarza /*ngIf  (pokaze formularz dodawania) -->
+  <!-- 2. Po zapisaniu (zapisz) => comments.push(wartosc komentarza)-->
+  <!-- 3. Wyczyszczenie formularza-->
+  <!-- 4. Schowanie formularza-->
+
+  <!-- Zadania n 6: -->
+  <!-- Data domyslnie dzisiejsza -->
+  <!-- Uzytkownik ten co jest zalogowany -->
+  <!-- Usuwanie komentarzy -->
+  <!-- Edycja komentarzy -->
 </table>
   </mat-card>
 </form>

@@ -1,3 +1,5 @@
+import { SharedModule } from './../shared/shared.module';
+import { MatDialogModule } from '@angular/material/dialog';
 import { TicketsService } from './tickets.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -34,9 +36,11 @@ const Routes: Routes = [
   declarations: [EditComponent, AddComponent, ListComponent],
   imports: [
     CommonModule,
+    SharedModule,
     FormsModule,
     MatToolbarModule,
     MatIconModule,
+    MatDialogModule,
     MatChipsModule,
     MatSelectModule,
     ReactiveFormsModule,

@@ -27,7 +27,7 @@
 
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef>Delete</th>
-    <td mat-mat-cell *matCellDef="let element">
+    <td mat-cell *matCellDef="let element">
       <mat-icon color="warn" (click)="delete(element.id)">delete</mat-icon>
     </td>
   </ng-container>

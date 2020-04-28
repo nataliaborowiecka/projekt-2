@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
         );
         if (findUser) {
           if (findUser.password === this.form.value.password) {
+            // LocalStorage
+            // Zapisac do local storage zalogowanego uzytkownika
             this.router.navigateByUrl('/app/users');
           } else {
             this.snackBar.open('Hasło niepoprawne', 'OK', {

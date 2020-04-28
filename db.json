@@ -133,58 +133,8 @@
         "id": 10
       },
       "title": "natalia",
-      "status": "CLOSED"
-    },
-    {
-      "id": 6,
-      "user": {
-        "name": "natalia",
-        "surname": "borowiecka",
-        "login": "natalka",
-        "password": "admin",
-        "id": 12
-      },
-      "client": {
-        "id": 5,
-        "name": "natalia",
-        "surname": "fdwqdqw",
-        "phone": 55555,
-        "companyname": null,
-        "nip": null,
-        "city": null,
-        "postalcode": null,
-        "street": null,
-        "buildingnumber": null,
-        "apartment": null
-      },
-      "title": "projekt",
-      "status": "NEW"
-    },
-    {
-      "user": {
-        "name": "rty",
-        "surname": "tyy",
-        "login": "rty",
-        "password": "rty",
-        "id": 11
-      },
-      "client": {
-        "id": 5,
-        "name": "natalia",
-        "surname": "fdwqdqw",
-        "phone": 55555,
-        "companyname": null,
-        "nip": null,
-        "city": null,
-        "postalcode": null,
-        "street": null,
-        "buildingnumber": null,
-        "apartment": null
-      },
-      "title": "natalia",
-      "description": null,
-      "status": "IN_PROGRESS",
-      "id": 7
+      "status": "CLOSED",
+      "description": "opis 123"
     },
     {
       "user": {
