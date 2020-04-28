@@ -37,4 +37,20 @@ export class ListComponent implements OnInit {
       });
     }
   }
-}
+  selectColor(color) {
+    if (color === 'CLOSED') {
+      return 'warn';
+    } else {
+      if (color === 'IN PROGRESS') {
+        return 'primary';
+      } else {
+        if (color === 'NEW') {
+          return 'accent';
+        } else {
+          return '';
+        }
+        }
+      }
+      }
+
+    }

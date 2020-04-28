@@ -1,3 +1,4 @@
+import { User } from './../users.type';
 import { Router } from '@angular/router';
 import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';

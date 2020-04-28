@@ -69,6 +69,18 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <hr>
+    <strong>Komentarze</strong>
+<table>
+  <td>Data</td>
+  <td>Użytkownik</td>
+  <td>Treść</td>
+  <tr *ngFor="let comment of comments">
+    <td>{{comment.date}}</td>
+    <td>{{comment.user?.name}}</td>
+    <td>{{comment.description}}</td>
+  </tr>
+</table>
   </mat-card>
 </form>
 <mat-toolbar class="toolbar">

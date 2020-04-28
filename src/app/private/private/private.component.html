@@ -3,37 +3,67 @@
     <img
       src="https://bpc.pl/img/logo-footer.png"
       alt="logo"
-      width="150"
-      height="75"
+      width="100"
+      height="7%"
+      class="logo"
     />
 
-    <mat-list role="list" class="list">
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
-        <a matLine [routerLink]="['/app/users']">Użytkownicy</a>
-        <mat-icon>person</mat-icon>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
+    <mat-expansion-panel class="panel">
+      <mat-expansion-panel-header hideToggle>
+        <mat-icon class="icons">person</mat-icon>
+        <a matLine>Użytkownicy</a>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
         <a matLine [routerLink]="['/app/users/add']">Dodaj użytkownika</a>
-        <mat-icon>add</mat-icon>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
-        <a matLine [routerLink]="['/app/clients']">Klienci</a>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <mat-icon class="icons">add</mat-icon>
+      </mat-panel-description>
+      <mat-panel-description>
+        <a matLine [routerLink]="['/app/users']">Lista użytkowników</a>
+        <mat-icon class="icons">person</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="panel">
+      <mat-expansion-panel-header>
+        <a matLine >Klienci</a>
+        <mat-icon class="icons">person_pin</mat-icon>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
         <a matLine [routerLink]="['/app/clients/add']">Dodaj klienta</a>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
-        <a matLine [routerLink]="['/app/tickets']">Zgłoszenia</a>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item role="listitem" class="listitem" aria-label="button">
+        <mat-icon class="icons">add</mat-icon>
+      </mat-panel-description>
+      <mat-panel-description>
+        <a matLine [routerLink]="['/app/clients']">Lista klientów</a>
+        <mat-icon class="icons">person_pin</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="panel">
+      <mat-expansion-panel-header>
+        <a matLine>Zgłoszenia</a>
+        <mat-icon class="icons">chat_bubble_outline</mat-icon>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
         <a matLine [routerLink]="['/app/tickets/add']">Dodaj zgłoszenie</a>
-      </mat-list-item>
-    </mat-list>
+        <mat-icon class="icons">add</mat-icon>
+      </mat-panel-description>
+      <mat-panel-description>
+        <a matLine [routerLink]="['/app/tickets']">Lista zgłoszeń</a>
+        <mat-icon class="icons">list</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="panel">
+      <mat-expansion-panel-header>
+        <a matLine>Raporty</a>
+        <mat-icon class="icons">assignment</mat-icon>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <a matLine >Raporty zgłoszeń</a>
+        <mat-icon class="icons">chat_bubble_outline</mat-icon>
+      </mat-panel-description>
+      <mat-panel-description>
+        <a matLine >Raporty użytkowników</a>
+        <mat-icon class="icons">person</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">

@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const Routes: Routes = [
   {
@@ -37,6 +38,7 @@ const Routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
     MatCheckboxModule,

@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatSidenavModule,
     MatToolbarModule,
+    MatExpansionModule,
     MatListModule,
     MatMenuModule,
     MatButtonModule,

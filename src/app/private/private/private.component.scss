@@ -1,35 +1,50 @@
-.container
- {
-   position: absolute;
+.container {
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: rgb(207, 207, 207);
- };
- .menu {
-   width: 15% ;
-   background-color: rgb(156, 155, 155);
-   display: flex;
-   align-items: center;
- };
+}
+.menu {
+  width: 15%;
+  background-color: rgba(116, 162, 231, 0.507);
+  display: flex;
+
+}
 .toolbar {
-  height: 10%;
-  background-color: rgb(156, 155, 155);
+  height: 7%;
+  background-color: 	rgb(24, 40, 87)
 }
 .usersbutton {
   background-color: rgba(128, 128, 128, 0);
   margin: auto;
-
-};
+}
 .clientsbutton {
   background-color: rgba(128, 128, 128, 0);
   margin: auto;
-};
+}
 .logoutbutton {
   padding: 0 14px;
-  background-color: rgba(128, 128, 128, 0);
-};
+  background-color:rgba(116, 162, 231, 0.507);
+}
 .spacer {
   flex: 1 1 auto;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+  color: rgb(24, 40, 87);
+
+}
+.icons {
+order: -1;
+color: rgb(24, 40, 87);
+}
+.panel {
+  background-color: rgba(116, 162, 231, 0.212);
 }

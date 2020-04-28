@@ -1,11 +1,14 @@
 table {
   width: 100%;
 }
+.tablerow {
+  cursor: pointer;
+}
 .button-container {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
-.button {
-  background-color: grey;
+table.table tr:hover td {
+background-color: rgba(194, 191, 191, 0.637);
 }

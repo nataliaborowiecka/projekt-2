@@ -1,5 +1,6 @@
+import { User } from './../../users/users.type';
 import { ClientsService } from './../../clients/clients.service';
-import { TicketStatus } from './../ticket.type';
+import { TicketStatus, Ticket } from './../ticket.type';
 
 import { UsersService } from './../../users/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -8,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
+import { getMultipleValuesInSingleSelectionError } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-edit',
@@ -21,12 +23,13 @@ export class EditComponent implements OnInit {
     user: new FormControl(null, [Validators.required]),
     client: new FormControl(null, [Validators.required]),
     title: new FormControl(null, [Validators.required]),
-    status: new FormControl()
+    status: new FormControl(),
   });
   ticket;
   TicketStatus = TicketStatus;
   users = [];
   clients = [];
+  comments = [];
 
   constructor(
     private router: Router,
@@ -40,16 +43,26 @@ export class EditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ticketsService.getTicket(this.id).subscribe((ticket) => {
+    this.getTicket();
+    this.getUsers();
+    this.getClients();
+  }
+  getTicket() {
+    this.ticketsService.getTicket(this.id).subscribe((ticket: Ticket) => {
       this.form.patchValue(ticket);
       this.ticket = ticket;
-      this.usersService
-        .getUsers()
-        .subscribe((listOfUsers: any) => (this.users = listOfUsers));
-      this.clientsService
-        .getClients()
-        .subscribe((listOfClients: any) => (this.clients = listOfClients));
+      this.comments = ticket.comments;
     });
+  }
+  getUsers() {
+    this.usersService
+      .getUsers()
+      .subscribe((listOfUsers: any) => (this.users = listOfUsers));
+  }
+  getClients() {
+    this.clientsService
+      .getClients()
+      .subscribe((listOfClients: any) => (this.clients = listOfClients));
   }
   save() {
     const dataToSave = {

@@ -27,6 +27,13 @@
       "login": "aaaaa",
       "password": "admin",
       "id": 13
+    },
+    {
+      "name": "admin",
+      "surname": "admin",
+      "login": "admin",
+      "password": "admin",
+      "id": 14
     }
   ],
   "clients": [
@@ -104,31 +111,6 @@
   ],
   "tickets": [
     {
-      "id": 4,
-      "user": {
-        "name": "rty",
-        "surname": "tyy",
-        "login": "rty",
-        "password": "rty",
-        "id": 11
-      },
-      "client": {
-        "id": 9,
-        "name": "hrhd",
-        "surname": "hdghdrf",
-        "phone": 321,
-        "companyname": null,
-        "nip": null,
-        "city": null,
-        "postalcode": null,
-        "street": null,
-        "buildingnumber": null,
-        "apartment": null
-      },
-      "title": "natalia",
-      "description": null
-    },
-    {
       "id": 5,
       "user": {
         "name": "rty",
@@ -203,6 +185,45 @@
       "description": null,
       "status": "IN_PROGRESS",
       "id": 7
+    },
+    {
+      "user": {
+        "name": "natalia",
+        "surname": "borowiecka",
+        "login": "natalka",
+        "password": "admin",
+        "id": 12
+      },
+      "client": {
+        "id": 8,
+        "name": "aaaa",
+        "surname": "aaaa",
+        "phone": 667766,
+        "companyname": "aaaa",
+        "nip": 3333,
+        "city": "aaaa",
+        "postalcode": 43300,
+        "street": "sssss",
+        "buildingnumber": null,
+        "apartment": 33322
+      },
+      "comments": [
+        {
+          "date": "12/12/2021",
+          "user": {
+            "name": "rty",
+            "surname": "tyy",
+            "login": "rty",
+            "password": "rty",
+            "id": 11
+          },
+          "description": "KOmentarz 1"
+        }
+      ],
+      "title": "admin1",
+      "description": "defc",
+      "status": "NEW",
+      "id": 8
     }
   ]
 }

@@ -1,3 +1,6 @@
+
+
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { ClientsService } from './../clients.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -24,7 +27,11 @@ export class ListComponent implements OnInit {
   ];
   dataSource = [];
 
-  constructor(private clientsService: ClientsService, private router: Router) {}
+  constructor(
+    private clientsService: ClientsService,
+    private router: Router,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.clientsService.getClients().subscribe((clientsList: any) => {
@@ -32,13 +39,11 @@ export class ListComponent implements OnInit {
     });
   }
   delete(id) {
-    if (confirm('Czy chcesz usunąć klienta?')) {
-      this.clientsService.delete(id).subscribe((response) => {
-        this.clientsService.getClients().subscribe((clientsList: any) => {
-          this.dataSource = clientsList;
-          this.router.navigate(['/app/clients']);
-        });
+    this.clientsService.delete(id).subscribe((response) => {
+      this.clientsService.getClients().subscribe((clientsList: any) => {
+        this.dataSource = clientsList;
+        this.router.navigate(['/app/clients']);
       });
-    }
+    });
   }
 }
