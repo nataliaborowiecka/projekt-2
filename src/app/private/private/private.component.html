@@ -3,9 +3,10 @@
     <img
       src="https://bpc.pl/img/logo-footer.png"
       alt="logo"
-      width="100"
+      width="auto"
       height="7%"
       class="logo"
+      [routerLink]="['/app/dashboard']"
     />
 
     <mat-expansion-panel class="panel">
@@ -24,7 +25,7 @@
     </mat-expansion-panel>
     <mat-expansion-panel class="panel">
       <mat-expansion-panel-header>
-        <a matLine >Klienci</a>
+        <a matLine>Klienci</a>
         <mat-icon class="icons">person_pin</mat-icon>
       </mat-expansion-panel-header>
       <mat-panel-description>
@@ -56,11 +57,11 @@
         <mat-icon class="icons">assignment</mat-icon>
       </mat-expansion-panel-header>
       <mat-panel-description>
-        <a matLine >Raporty zgłoszeń</a>
+        <a matLine>Raporty zgłoszeń</a>
         <mat-icon class="icons">chat_bubble_outline</mat-icon>
       </mat-panel-description>
       <mat-panel-description>
-        <a matLine >Raporty użytkowników</a>
+        <a matLine>Raporty użytkowników</a>
         <mat-icon class="icons">person</mat-icon>
       </mat-panel-description>
     </mat-expansion-panel>
@@ -82,5 +83,7 @@
       </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+
+
+

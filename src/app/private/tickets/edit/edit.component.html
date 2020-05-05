@@ -69,18 +69,48 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <hr>
+    <hr />
     <strong>Komentarze</strong>
-<table>
-  <td>Data</td>
-  <td>Użytkownik</td>
-  <td>Treść</td>
-  <tr *ngFor="let comment of comments">
-    <td>{{comment.date}}</td>
-    <td>{{comment.user?.name}}</td>
-    <td>{{comment.description}}</td>
-  </tr>
-</table>
+    <table>
+      <td>Data</td>
+      <td>Użytkownik</td>
+      <td>Treść</td>
+      <tr *ngFor="let comment of comments">
+        <td>{{ comment.date }}</td>
+        <td>{{ comment.commentuser }}</td>
+        <td>{{ comment.description }}</td>
+      </tr>
+    </table>
+    <button
+      mat-fab
+      color="primary"
+      class="addcomment"
+      (click)="addcomment = true"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+    <div *ngIf="addcomment">
+      <mat-form-field>
+        <mat-label>Data</mat-label>
+        <input matInput formControlName="date" [matDatepicker]="picker1" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker1"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Użytkownik</mat-label>
+        <input matInput formControlName="commentuser" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Treść</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+      <button mat-mini-fab (click)="savecomment()" color="primary">
+        Zapisz
+      </button>
+    </div>
   </mat-card>
 </form>
 <mat-toolbar class="toolbar">

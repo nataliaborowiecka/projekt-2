@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -27,14 +28,17 @@ const routes: Routes = [
       {
         path: 'tickets',
         loadChildren: () => import('./tickets/tickets.module').then(m => m.TicketsModule)
+      },
+      {
+      path: 'dashboard',
+      loadChildren: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
       }
-
     ]
   }
 ];
 
 @NgModule({
-  declarations: [PrivateComponent],
+  declarations: [PrivateComponent, DashboardComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

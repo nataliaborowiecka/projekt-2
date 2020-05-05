@@ -25,11 +25,20 @@ export class EditComponent implements OnInit {
     title: new FormControl(null, [Validators.required]),
     status: new FormControl(),
   });
+  commentform = new FormGroup({
+    date: new FormControl(),
+    commentuser: new FormControl(),
+    description: new FormControl(),
+  });
   ticket;
   TicketStatus = TicketStatus;
   users = [];
   clients = [];
   comments = [];
+  addcomment: boolean = false;
+
+  date = new FormControl(new Date());
+  serializedDate = new FormControl(new Date().toISOString());
 
   constructor(
     private router: Router,
@@ -74,5 +83,9 @@ export class EditComponent implements OnInit {
       });
       this.router.navigate(['app/tickets']);
     });
+  }
+  savecomment() {
+    this.comments.push(this.commentform.value);
+    
   }
 }

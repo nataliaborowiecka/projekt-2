@@ -1,3 +1,5 @@
+import { MatDialogModule } from '@angular/material/dialog';
+import { Add_commentComponent } from './add_comment/add_comment.component';
 import { TicketsService } from './tickets.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -15,6 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const Routes: Routes = [
   {
@@ -31,7 +35,7 @@ const Routes: Routes = [
   },
 ];
 @NgModule({
-  declarations: [EditComponent, AddComponent, ListComponent],
+  declarations: [EditComponent, AddComponent, ListComponent, Add_commentComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -39,7 +43,10 @@ const Routes: Routes = [
     MatIconModule,
     MatChipsModule,
     MatSelectModule,
+    MatDialogModule,
+    MatNativeDateModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
     MatButtonModule,
     MatTableModule,
     MatCardModule,

@@ -34,6 +34,13 @@
       "login": "admin",
       "password": "admin",
       "id": 14
+    },
+    {
+      "name": "admin",
+      "surname": "admin1",
+      "login": "admin",
+      "password": "admin",
+      "id": 15
     }
   ],
   "clients": [
@@ -68,32 +75,6 @@
       "street": "sssss",
       "buildingnumber": null,
       "apartment": 33322
-    },
-    {
-      "id": 9,
-      "name": "hrhd",
-      "surname": "hdghdrf",
-      "phone": 321,
-      "companyname": null,
-      "nip": null,
-      "city": null,
-      "postalcode": null,
-      "street": null,
-      "buildingnumber": null,
-      "apartment": null
-    },
-    {
-      "name": "kubarawr",
-      "surname": "qq",
-      "phone": 4324,
-      "companyname": null,
-      "nip": null,
-      "city": null,
-      "postalcode": null,
-      "street": null,
-      "buildingnumber": null,
-      "apartment": null,
-      "id": 10
     },
     {
       "name": "aaaaa",
