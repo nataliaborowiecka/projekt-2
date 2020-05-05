@@ -50,8 +50,19 @@ color: rgb(24, 40, 87);
 .panel {
   background-color: rgba(116, 162, 231, 0.212);
 }
+
+.global-content {
+  z-index: 10;
+}
+
 .footer {
+  z-index: 9;
   height: 20px;
   width: 100%;
-  background-color: rgba(128, 128, 128, 0);
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

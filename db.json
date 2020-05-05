@@ -125,6 +125,7 @@
         "password": "admin",
         "id": 12
       },
+      "description": null,
       "client": {
         "id": 5,
         "name": "natalia",
@@ -139,7 +140,19 @@
         "apartment": null
       },
       "title": "projekt",
-      "status": "NEW"
+      "status": "NEW",
+      "comments": [
+        {
+          "date": "2020-05-11T22:00:00.000Z",
+          "commentuser": "ddd",
+          "description": "www"
+        },
+        {
+          "date": "2020-05-12T22:00:00.000Z",
+          "commentuser": "www",
+          "description": "qqq"
+        }
+      ]
     },
     {
       "user": {

@@ -66,23 +66,28 @@
       </mat-panel-description>
     </mat-expansion-panel>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar class="toolbar">
-      <span class="spacer"></span>
-      <button
-        mat-raised-button
-        [matMenuTriggerFor]="menul"
-        class="logoutbutton"
-      >
-        <mat-icon aria-hidden="false" aria-label="Example home icon"
-          >person</mat-icon
-        >
-      </button>
-      <mat-menu #menul="matMenu">
-        <button mat-menu-item [routerLink]="['../']">Wyloguj</button>
-      </mat-menu>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
+<mat-sidenav-content>
+<mat-toolbar class="toolbar">
+  <span class="spacer"></span>
+  <button
+    mat-raised-button
+    [matMenuTriggerFor]="menul"
+    class="logoutbutton"
+  >
+    <mat-icon aria-hidden="false" aria-label="Example home icon"
+      >person</mat-icon
+    >
+  </button>
+  <mat-menu #menul="matMenu">
+    <button mat-menu-item [routerLink]="['../']">Wyloguj</button>
+  </mat-menu>
+</mat-toolbar>
+<router-outlet class="global-content"></router-outlet>
+
+<mat-toolbar class="toolbar footer">
+  ssss
+</mat-toolbar>
+
 
 
 
