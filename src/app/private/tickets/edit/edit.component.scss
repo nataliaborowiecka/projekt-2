@@ -3,12 +3,16 @@
   grid-template-columns: 50% 50%;
   grid-gap: 7px 7px;
 }
+
 .toolbar {
   width: 100%;
 }
-.addcomment {
-  position: fixed;
-  right: 5%;
 
+.addcomment {
+  position: static;
+  right: 5%;
 }
 
+.commentsTable {
+  width: 100%;
+}

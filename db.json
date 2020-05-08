@@ -41,6 +41,13 @@
       "login": "admin",
       "password": "admin",
       "id": 15
+    },
+    {
+      "name": "natalia",
+      "surname": "natalia",
+      "login": "natalia",
+      "password": "natalia",
+      "id": 16
     }
   ],
   "clients": [
@@ -125,6 +132,7 @@
         "password": "admin",
         "id": 12
       },
+      "description": null,
       "client": {
         "id": 5,
         "name": "natalia",
@@ -139,7 +147,20 @@
         "apartment": null
       },
       "title": "projekt",
-      "status": "NEW"
+      "status": "NEW",
+      "comments": [
+        {
+          "date": "2020-05-03T22:00:00.000Z",
+          "commentuser": {
+            "name": "admin",
+            "surname": "admin",
+            "login": "admin",
+            "password": "admin",
+            "id": 14
+          },
+          "description": "komentarz45"
+        }
+      ]
     },
     {
       "user": {
@@ -168,6 +189,7 @@
       "id": 7
     },
     {
+      "id": 8,
       "user": {
         "name": "natalia",
         "surname": "borowiecka",
@@ -175,6 +197,7 @@
         "password": "admin",
         "id": 12
       },
+      "description": null,
       "client": {
         "id": 8,
         "name": "aaaa",
@@ -188,6 +211,8 @@
         "buildingnumber": null,
         "apartment": 33322
       },
+      "title": "admin1",
+      "status": "NEW",
       "comments": [
         {
           "date": "12/12/2021",
@@ -199,12 +224,78 @@
             "id": 11
           },
           "description": "KOmentarz 1"
+        },
+        {
+          "date": "2020-05-07T22:00:00.000Z",
+          "description": "opiss"
+        },
+        {
+          "date": "2020-05-07T22:00:00.000Z",
+          "commentuser": {
+            "name": "admin",
+            "surname": "admin",
+            "login": "admin",
+            "password": "admin",
+            "id": 14
+          },
+          "description": "qq"
+        },
+        {
+          "date": "2020-05-08T22:00:00.000Z",
+          "commentuser": {
+            "name": "natalia",
+            "surname": "natalia",
+            "login": "natalia",
+            "password": "natalia",
+            "id": 16
+          },
+          "description": "q"
+        },
+        {
+          "date": "2020-05-06T22:00:00.000Z",
+          "commentuser": {
+            "name": "natalia",
+            "surname": "natalia",
+            "login": "natalia",
+            "password": "natalia",
+            "id": 16
+          },
+          "description": "q"
+        },
+        {
+          "date": null,
+          "commentuser": {
+            "name": "natalia",
+            "surname": "natalia",
+            "login": "natalia",
+            "password": "natalia",
+            "id": 16
+          },
+          "description": null
+        },
+        {
+          "date": "2020-05-06T22:00:00.000Z",
+          "commentuser": {
+            "name": "natalia",
+            "surname": "natalia",
+            "login": "natalia",
+            "password": "natalia",
+            "id": 16
+          },
+          "description": "q"
+        },
+        {
+          "date": "2020-05-06T22:00:00.000Z",
+          "commentuser": {
+            "name": "natalia",
+            "surname": "natalia",
+            "login": "natalia",
+            "password": "natalia",
+            "id": 16
+          },
+          "description": "qqqq"
         }
-      ],
-      "title": "admin1",
-      "description": "defc",
-      "status": "NEW",
-      "id": 8
+      ]
     }
   ]
 }

@@ -10,13 +10,12 @@
 }
 .menu {
   width: 15%;
-  background-color: rgba(116, 162, 231, 0.507);
+  background-color: rgba(116, 162, 231, 0.418);
   display: flex;
-
 }
 .toolbar {
   height: 7%;
-  background-color: 	rgb(24, 40, 87)
+  background-color: rgb(24, 40, 87);
 }
 .usersbutton {
   background-color: rgba(128, 128, 128, 0);
@@ -28,7 +27,7 @@
 }
 .logoutbutton {
   padding: 0 14px;
-  background-color:rgba(116, 162, 231, 0.507);
+  background-color: rgba(116, 162, 231, 0.507);
 }
 .spacer {
   flex: 1 1 auto;
@@ -41,17 +40,28 @@
 a {
   text-decoration: none;
   color: rgb(24, 40, 87);
-
 }
 .icons {
-order: -1;
-color: rgb(24, 40, 87);
+  order: -1;
+  color: rgb(24, 40, 87);
 }
 .panel {
-  background-color: rgba(116, 162, 231, 0.212);
+  background-color: rgba(116, 162, 231, 0.288);
+}
+
+.global-content {
+  z-index: 10;
 }
 .footer {
-  height: 20px;
+  height: 40px;
   width: 100%;
-  background-color: rgba(128, 128, 128, 0);
+  color: rgb(187, 52, 52);
+  background-color: rgb(24, 40, 87);;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  display: flex;
+  text-align: center;
 }

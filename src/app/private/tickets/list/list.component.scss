@@ -4,14 +4,14 @@
 .button-container {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 45px;
 }
 
 .tablerow {
   cursor: pointer;
 }
 table.table tr:hover td {
-background-color: rgba(194, 191, 191, 0.637);
+  background-color: rgba(194, 191, 191, 0.637);
 }
 .chip {
   width: auto;
