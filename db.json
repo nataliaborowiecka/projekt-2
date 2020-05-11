@@ -71,19 +71,6 @@
       "apartment": null
     },
     {
-      "id": 8,
-      "name": "aaaa",
-      "surname": "aaaa",
-      "phone": 667766,
-      "companyname": "aaaa",
-      "nip": 3333,
-      "city": "aaaa",
-      "postalcode": 43300,
-      "street": "sssss",
-      "buildingnumber": null,
-      "apartment": 33322
-    },
-    {
       "name": "aaaaa",
       "surname": "aaaaa",
       "phone": 111,
@@ -294,6 +281,17 @@
             "id": 16
           },
           "description": "qqqq"
+        },
+        {
+          "date": null,
+          "commentuser": {
+            "name": "admin",
+            "surname": "admin",
+            "login": "admin",
+            "password": "admin",
+            "id": 14
+          },
+          "description": null
         }
       ]
     }
