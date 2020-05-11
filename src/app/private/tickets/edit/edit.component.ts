@@ -1,15 +1,25 @@
-import { User } from './../../users/users.type';
-import { ClientsService } from './../../clients/clients.service';
-import { TicketStatus, Ticket } from './../ticket.type';
-
-import { UsersService } from './../../users/users.service';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { TicketsService } from './../tickets.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
-import { MatSelectChange } from '@angular/material/select';
-import { getMultipleValuesInSingleSelectionError } from '@angular/cdk/collections';
+import {
+  ActivatedRoute,
+  Router
+} from '@angular/router';
+
+import { ClientsService } from '../../clients/clients.service';
+import { UsersService } from '../../users/users.service';
+import {
+  Ticket,
+  TicketStatus
+} from '../ticket.type';
+import { TicketsService } from '../tickets.service';
 
 @Component({
   selector: 'app-edit',
@@ -17,7 +27,7 @@ import { getMultipleValuesInSingleSelectionError } from '@angular/cdk/collection
   styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
-  id;
+  id: string;
   form = new FormGroup({
     id: new FormControl(null),
     user: new FormControl(null, [Validators.required]),
