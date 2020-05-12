@@ -74,20 +74,20 @@
     <table mat-table [dataSource]="dataSource" class="commentsTable">
       <ng-container matColumnDef="date">
         <th mat-header-cell *matHeaderCellDef>Data</th>
-        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+        <td mat-cell *matCellDef="let comment">{{ comment.date }}</td>
       </ng-container>
 
       <ng-container matColumnDef="commentuser">
         <th mat-header-cell *matHeaderCellDef>Użytkownik</th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.commentuser }}
+        <td mat-cell *matCellDef="let comment">
+          {{ comment.commentuser }}
         </td>
       </ng-container>
 
       <ng-container matColumnDef="description">
         <th mat-header-cell *matHeaderCellDef>Opis</th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.description }}
+        <td mat-cell *matCellDef="let comment">
+          {{ comment.description }}
         </td>
       </ng-container>
 

@@ -10,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { getMultipleValuesInSingleSelectionError } from '@angular/cdk/collections';
+import { Client } from '../../clients/clients.type';
 
 @Component({
   selector: 'app-edit',
@@ -17,7 +18,7 @@ import { getMultipleValuesInSingleSelectionError } from '@angular/cdk/collection
   styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
-  id;
+  id: number;
   form = new FormGroup({
     id: new FormControl(null),
     user: new FormControl(null, [Validators.required]),
@@ -31,10 +32,10 @@ export class EditComponent implements OnInit {
     commentuser: new FormControl(),
     description: new FormControl(),
   });
-  ticket;
+  ticket: Ticket;
   TicketStatus = TicketStatus;
-  users = [];
-  clients = [];
+  users: User[] = [];
+  clients: Client[] = [];
   comments = [];
   addcomment = false;
   dataSource = [];
@@ -64,7 +65,7 @@ export class EditComponent implements OnInit {
 
   addComments() {
     this.addcomment = true;
-    
+
     const loggedUserId = +localStorage.getItem('userId');
     this.commentForm.patchValue({
       commentuser: this.users.find((user) => user.id === loggedUserId),
@@ -112,7 +113,8 @@ export class EditComponent implements OnInit {
   }
 
   savecomment() {
-    this.comments.push(this.commentForm.value);
+    this.dataSource = this.ticket.comments;
+    this.dataSource.push(this.commentForm.value);
     this.save(false);
   }
 }

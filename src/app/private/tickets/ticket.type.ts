@@ -1,4 +1,5 @@
 import { User } from './../users/users.type';
+import { Client } from '../clients/clients.type';
 export enum TicketStatus {
   NEW = 'Nowe',
   IN_PROGRESS = 'W trakcie',
@@ -11,7 +12,8 @@ export interface Ticket {
   status: TicketStatus;
   title: string;
   user: User;
-  comments: TicketComment[]
+  comments: TicketComment[];
+  client: Client;
 
 }
 export interface TicketComment {

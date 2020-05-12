@@ -12,4 +12,3 @@ export interface Client {
   apartment: number;
 }
 
-export interface 
