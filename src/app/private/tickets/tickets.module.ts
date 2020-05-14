@@ -6,8 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EditComponent } from './edit/edit.component';
-import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
+import { AddComponent } from './add/add.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -20,23 +20,36 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
-
 const Routes: Routes = [
   {
     path: '',
     component: ListComponent,
+    data: {
+      breadcrumb: 'Zgłoszenia',
+    },
   },
   {
     path: 'add',
     component: AddComponent,
+    data: {
+      breadcrumb: 'Dodaj zgłoszenie',
+    },
   },
   {
     path: 'edit/:id',
     component: EditComponent,
+    data: {
+      breadcrumb: 'Edycja zgłoszenia',
+    },
   },
 ];
 @NgModule({
-  declarations: [EditComponent, AddComponent, ListComponent, Add_commentComponent],
+  declarations: [
+    EditComponent,
+    AddComponent,
+    ListComponent,
+    Add_commentComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,

@@ -19,14 +19,23 @@ const Routes: Routes = [
   {
     path: '',
     component: ListComponent,
+    data: {
+      breadcrumb: 'Klienci'
+    }
   },
   {
     path: 'add',
     component: AddComponent,
+    data: {
+      breadcrumb: 'Dodaj klienta'
+    }
   },
   {
     path: 'edit/:id',
     component: EditComponent,
+    data: {
+      breadcrumb: 'Edycja klienta'
+    }
   },
   {
     path: 'view',

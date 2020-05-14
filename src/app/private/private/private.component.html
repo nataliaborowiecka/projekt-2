@@ -82,6 +82,18 @@
         <button mat-menu-item (click)="logOut()">Wyloguj</button>
       </mat-menu>
     </mat-toolbar>
+    <mat-toolbar class="breadcrumbToolbar">
+      <ol class="breadcrumb">
+        <li *ngFor="let breadcrumb of breadcrumbs">
+          <span
+            [routerLink]="breadcrumb.url"
+            routerLinkActive="router-link-active"
+          >
+            {{ breadcrumb.label }}
+          </span>
+        </li>
+      </ol>
+    </mat-toolbar>
     <router-outlet class="global-content"></router-outlet>
 
     <mat-toolbar class="toolbar footer">
