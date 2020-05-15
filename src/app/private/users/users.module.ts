@@ -18,15 +18,15 @@ const routes: Routes = [
     path: '',
     component: ListComponent,
     data: {
-      breadcrumb: 'Użytkownicy'
-    }
+      breadcrumb: '',
+    },
   },
   {
     path: 'edit/:id',
     component: EditComponent,
     data: {
-      breadcrumb: 'Edycja użytkownika'
-    }
+      breadcrumb: '',
+    },
   },
   {
     path: 'view',
@@ -36,8 +36,8 @@ const routes: Routes = [
     path: 'add',
     component: AddComponent,
     data: {
-      breadcrumb: 'Dodaj użytkownika'
-    }
+      breadcrumb: 'Dodaj użytkownika',
+    },
   },
 ];
 @NgModule({

@@ -20,7 +20,7 @@ const Routes: Routes = [
     path: '',
     component: ListComponent,
     data: {
-      breadcrumb: 'Klienci'
+      breadcrumb: ''
     }
   },
   {
@@ -34,7 +34,7 @@ const Routes: Routes = [
     path: 'edit/:id',
     component: EditComponent,
     data: {
-      breadcrumb: 'Edycja klienta'
+      breadcrumb: ''
     }
   },
   {

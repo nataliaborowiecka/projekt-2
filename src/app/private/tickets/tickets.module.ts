@@ -25,7 +25,7 @@ const Routes: Routes = [
     path: '',
     component: ListComponent,
     data: {
-      breadcrumb: 'Zgłoszenia',
+      breadcrumb: '',
     },
   },
   {
@@ -39,7 +39,7 @@ const Routes: Routes = [
     path: 'edit/:id',
     component: EditComponent,
     data: {
-      breadcrumb: 'Edycja zgłoszenia',
+      breadcrumb: '',
     },
   },
 ];

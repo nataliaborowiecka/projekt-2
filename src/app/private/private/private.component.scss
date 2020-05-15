@@ -11,7 +11,8 @@
 .menu {
   width: 15%;
   background-color: rgba(116, 162, 231, 0.418);
-  display: flex;
+  position: fixed;
+  z-index: 1;
 }
 .toolbar {
   height: 7%;
@@ -55,19 +56,18 @@ a {
 .footer {
   height: 40px;
   width: 100%;
-  color: rgb(0, 0, 0);
+  color: white;
   background-color: rgb(24, 40, 87);
   padding: 1rem;
   position: fixed;
   bottom: 0;
   left: 0;
   font-size: 10px;
-  display: flex;
-  text-align: center;
+  z-index: 2;
 }
 .breadcrumb {
   background: none;
-  font-size: 0.8em;
+  font-size: 0.6em;
   margin: 0;
   a,
   span {
@@ -93,7 +93,7 @@ a {
   li:last-child::after {
     content: "";
   }
-  .breadcrumbToolbar {
-    height: 30px;
-  }
+}
+.breadcrumbToolbar {
+  height: 5%;
 }
