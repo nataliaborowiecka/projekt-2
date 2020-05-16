@@ -1,17 +1,19 @@
-import { ListComponent } from './clients/list/list.component';
-import { MatButtonModule } from '@angular/material/button';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { PrivateComponent } from './private/private.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
+import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PrivateComponent } from './private/private.component';
 
 const routes: Routes = [
   {

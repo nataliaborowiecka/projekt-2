@@ -1,7 +1,19 @@
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router
+} from '@angular/router';
+
+import {
+  distinctUntilChanged,
+  filter
+} from 'rxjs/operators';
+
 import { IBreadCrumb } from './private.type';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { filter, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-private',
@@ -39,12 +51,13 @@ export class PrivateComponent implements OnInit {
     if (isDynamicRoute && !!route.snapshot) {
       const paramName = lastRoutePart.split(':')[1];
       path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
-      label = route.snapshot.params[paramName];
+      label = `Edycja (${route.snapshot.params[paramName]})`;
     }
     const nextUrl = path ? `${url}/${path}` : url;
+    const isApp = nextUrl.split('/')[0] !== 'app' ? `/app${nextUrl}` : nextUrl;
     const breadcrumb: IBreadCrumb = {
       label: label,
-      url: nextUrl,
+      url: isApp,
     };
     const newBreadcrumbs = breadcrumb.label
       ? [...breadcrumbs, breadcrumb]
