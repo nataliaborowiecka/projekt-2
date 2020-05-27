@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "panel-admin-900d4": {
+      "hosting": {
+        "natalka": [
+          "panel-admin-900d4"
+        ]
+      }
+    }
+  }
+}

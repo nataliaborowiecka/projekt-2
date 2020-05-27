@@ -9,7 +9,7 @@ import { filter, distinctUntilChanged } from 'rxjs/operators';
   styleUrls: ['./private.component.scss'],
 })
 export class PrivateComponent implements OnInit {
-  public breadcrumbs: IBreadCrumb[];
+  breadcrumbs: IBreadCrumb[];
   constructor(private router: Router, private acRouter: ActivatedRoute) {
     this.breadcrumbs = this.buildBreadCrumb(this.acRouter.root);
   }
@@ -39,12 +39,13 @@ export class PrivateComponent implements OnInit {
     if (isDynamicRoute && !!route.snapshot) {
       const paramName = lastRoutePart.split(':')[1];
       path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
-      label = route.snapshot.params[paramName];
+      label = `Edycja (${route.snapshot.params[paramName]})`;
     }
     const nextUrl = path ? `${url}/${path}` : url;
+    const isApp = nextUrl.split('/')[0] !== 'app' ? `/app${nextUrl}` : nextUrl;
     const breadcrumb: IBreadCrumb = {
       label: label,
-      url: nextUrl,
+      url: isApp,
     };
     const newBreadcrumbs = breadcrumb.label
       ? [...breadcrumbs, breadcrumb]
