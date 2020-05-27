@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "natalka"
+  "defaultProject": "natalka",
+  "cli": {
+    "analytics": "f8cd322f-7f86-47e9-be4f-4ecf424c24f4"
+  }
 }

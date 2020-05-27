@@ -1,7 +1,19 @@
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router
+} from '@angular/router';
+
+import {
+  distinctUntilChanged,
+  filter
+} from 'rxjs/operators';
+
 import { IBreadCrumb } from './private.type';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { filter, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-private',

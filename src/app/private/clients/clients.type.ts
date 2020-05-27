@@ -11,4 +11,3 @@ export interface Client {
   buildingnumber: number;
   apartment: number;
 }
-
