@@ -9,6 +9,6 @@ export class PublicService {
 
   constructor(private http: HttpClient) {}
      getUserlist () {
-    return this.http.get(`${environment.backendUrl}users`);
+    return this.http.get(`${environment.firebase}users`);
   }
 }

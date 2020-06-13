@@ -1,3 +1,4 @@
+
 import { PublicModule } from './public/public.module';
 import { PrivateModule } from './private/private.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +23,8 @@ import { AngularFireModule } from '@angular/fire';
     HttpClientModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    NgxAuthFirebaseUIModule.forRoot(environment.firebase),
+    MatPasswordStrengthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

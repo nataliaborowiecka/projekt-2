@@ -1,6 +1,11 @@
 import { ClientsService } from './../clients.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl, FormControlName, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormControlName,
+  Validators,
+} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { getMatFormFieldPlaceholderConflictError } from '@angular/material/form-field';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -13,7 +18,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EditComponent implements OnInit {
   id;
   form = new FormGroup({
-    id: new FormControl(null),
     name: new FormControl(null, [Validators.required]),
     surname: new FormControl(null, [Validators.required]),
     phone: new FormControl(null, [Validators.required]),

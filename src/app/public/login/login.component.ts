@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthProvider } from 'ngx-auth-firebaseui';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  printUser(event) {
+    console.log(event);
+  }
+
+  printError(event) {
+    console.error(event);
+  }
+  providers = AuthProvider;
   form = new FormGroup({
     login: new FormControl(),
     password: new FormControl(),

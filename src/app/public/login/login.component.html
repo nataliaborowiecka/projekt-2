@@ -1,4 +1,4 @@
-<div class="parent">
+<!-- <!-- <div class="parent">
   <mat-card class="card">
     <img
       src="https://bpc.pl/img/logo-footer.png"
@@ -30,3 +30,26 @@
     </button>
   </mat-card>
 </div>
+<div class="parent">
+  <mat-card class="card">
+    <img src="https://bpc.pl/img/logo-footer.png" alt="Logo" width="140" height="70" />
+    <form class="login-form">
+      <mat-form-field [formGroup]="form">
+        <input matInput placeholder="Login" formControlName="login" (keydown.enter)="login()" />
+      </mat-form-field>
+      <mat-form-field [formGroup]="form">
+        <input matInput placeholder="Hasło" formControlName="password" type="password" (keydown.enter)="login()" />
+      </mat-form-field>
+    </form>
+    <button mat-raised-button class="button" (click)="login()">
+      Zaloguj
+    </button>
+  </mat-card>
+</div> -->
+<ngx-auth-firebaseui
+  [providers]="['google']"
+  (onSuccess)="printUser($event)"
+  (onError)="printError($event)"
+>
+</ngx-auth-firebaseui>
+<div i18n>Hello</div>
