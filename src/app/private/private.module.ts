@@ -1,3 +1,4 @@
+import { NgxAuthFirebaseUIModule, LoggedInGuard } from 'ngx-auth-firebaseui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,10 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {
-  RouterModule,
-  Routes
-} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PrivateComponent } from './private/private.component';
@@ -19,37 +17,44 @@ const routes: Routes = [
   {
     path: 'app',
     component: PrivateComponent,
+    canActivate: [LoggedInGuard],
     children: [
       {
         path: 'users',
         data: {
           breadcrumb: 'Użytkownicy',
         },
-        loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+        loadChildren: () =>
+          import('./users/users.module').then((m) => m.UsersModule),
       },
       {
         path: 'clients',
         data: {
-          breadcrumb: 'Klienci'
+          breadcrumb: 'Klienci',
         },
-        loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule)
+        loadChildren: () =>
+          import('./clients/clients.module').then((m) => m.ClientsModule),
       },
       {
         path: 'tickets',
         data: {
-          breadcrumb: 'Zgłoszenia'
+          breadcrumb: 'Zgłoszenia',
         },
-        loadChildren: () => import('./tickets/tickets.module').then(m => m.TicketsModule)
+        loadChildren: () =>
+          import('./tickets/tickets.module').then((m) => m.TicketsModule),
       },
       {
-      path: 'dashboard',
-      data: {
-        breadcrumb: 'Strona główna'
+        path: 'dashboard',
+        data: {
+          breadcrumb: 'Strona główna',
+        },
+        loadChildren: () =>
+          import('./dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent
+          ),
       },
-      loadChildren: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
-      }
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
@@ -63,7 +68,8 @@ const routes: Routes = [
     MatListModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    NgxAuthFirebaseUIModule,
+  ],
 })
-export class PrivateModule { }
+export class PrivateModule {}

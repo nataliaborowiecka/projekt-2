@@ -1,17 +1,7 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router
-} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
-import {
-  distinctUntilChanged,
-  filter
-} from 'rxjs/operators';
+import { distinctUntilChanged, filter } from 'rxjs/operators';
 
 import { IBreadCrumb } from './private.type';
 
@@ -21,6 +11,7 @@ import { IBreadCrumb } from './private.type';
   styleUrls: ['./private.component.scss'],
 })
 export class PrivateComponent implements OnInit {
+  canLogOut = false;
   breadcrumbs: IBreadCrumb[];
   constructor(private router: Router, private acRouter: ActivatedRoute) {
     this.breadcrumbs = this.buildBreadCrumb(this.acRouter.root);
@@ -28,10 +19,6 @@ export class PrivateComponent implements OnInit {
 
   ngOnInit(): void {
     this.triggerBreadcrumb();
-  }
-  logOut() {
-    this.router.navigate(['../']);
-    localStorage.clear();
   }
 
   buildBreadCrumb(
@@ -77,5 +64,9 @@ export class PrivateComponent implements OnInit {
       .subscribe(() => {
         this.breadcrumbs = this.buildBreadCrumb(this.acRouter.root);
       });
+  }
+  signOut($event) {
+    this.router.navigate(['../']);
+    localStorage.clear();
   }
 }

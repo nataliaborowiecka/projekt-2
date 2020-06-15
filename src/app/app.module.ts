@@ -1,4 +1,3 @@
-
 import { PublicModule } from './public/public.module';
 import { PrivateModule } from './private/private.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +11,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +26,7 @@ import { MatPasswordStrengthModule } from '@angular-material-extensions/password
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     MatPasswordStrengthModule,
   ],
-  providers: [],
+  providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

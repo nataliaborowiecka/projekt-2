@@ -1,3 +1,4 @@
+import { Client } from './../clients.type';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { ClientsService } from './../clients.service';
 import { Component, OnInit } from '@angular/core';
@@ -32,16 +33,15 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getData();
+  }
+  getData() {
     this.clientsService.getClients().subscribe((clientsList: any) => {
       this.dataSource = clientsList;
     });
   }
   delete(id) {
-    this.clientsService.delete(id).subscribe((response) => {
-      this.clientsService.getClients().subscribe((clientsList: any) => {
-        this.dataSource = clientsList;
-        this.router.navigate(['/app/clients']);
-      });
-    });
+    this.clientsService.delete(id).subscribe((response) =>
+      this.getData());
   }
 }

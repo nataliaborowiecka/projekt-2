@@ -69,7 +69,7 @@ export class EditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getTicket();
+    // this.getTicket();
     this.getUsers();
     this.getClients();
   }
@@ -83,15 +83,15 @@ export class EditComponent implements OnInit {
     });
   }
 
-  getTicket() {
-    this.ticketsService.getTicket(this.id).subscribe((ticket: Ticket) => {
-      this.form.patchValue(ticket);
-      this.ticket = ticket;
-      if (ticket.comments) {
-        this.comments = ticket.comments;
-      }
-    });
-  }
+  // getTicket() {
+  //   this.ticketsService.getTicket(this.id).subscribe((ticket: Ticket) => {
+  //     this.form.patchValue(ticket);
+  //     this.ticket = ticket;
+  //     if (ticket.comments) {
+  //       this.comments = ticket.comments;
+  //     }
+  //   });
+  // }
 
   getUsers() {
     this.usersService

@@ -11,13 +11,6 @@ import { AuthProvider } from 'ngx-auth-firebaseui';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  printUser(event) {
-    console.log(event);
-  }
-
-  printError(event) {
-    console.error(event);
-  }
   providers = AuthProvider;
   form = new FormGroup({
     login: new FormControl(),
@@ -31,27 +24,35 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
-  login() {
-    this.publicService
-      .getUserlist()
-      .subscribe((listOfUsersFromBackend: any) => {
-        const findUser = listOfUsersFromBackend.find(
-          (user) => user.login === this.form.value.login
-        );
-        if (findUser) {
-          if (findUser.password === this.form.value.password) {
-            localStorage.setItem('userId', findUser.id);
-            this.router.navigateByUrl('/app/users');
-          } else {
-            this.snackBar.open('Hasło niepoprawne', 'OK', {
-              duration: 2000,
-            });
-          }
-        } else {
-          this.snackBar.open('Nie znaleziono użytkownika', 'OK', {
-            duration: 2000,
-          });
-        }
-      });
+  // login() {
+  //   this.publicService
+  //     .getUserlist()
+  //     .subscribe((listOfUsersFromBackend: any) => {
+  //       const findUser = listOfUsersFromBackend.find(
+  //         (user) => user.login === this.form.value.login
+  //       );
+  //       if (findUser) {
+  //         if (findUser.password === this.form.value.password) {
+  //           localStorage.setItem('userId', findUser.id);
+  //           this.router.navigateByUrl('/app/users');
+  //         } else {
+  //           this.snackBar.open('Hasło niepoprawne', 'OK', {
+  //             duration: 2000,
+  //           });
+  //         }
+  //       } else {
+  //         this.snackBar.open('Nie znaleziono użytkownika', 'OK', {
+  //           duration: 2000,
+  //         });
+  //       }
+  //     });
+  // }
+  printUser(event) {
+    console.log('test', event);
+    this.router.navigateByUrl('/app/users');
+  }
+
+  printError(event) {
+    console.error('ERROR',event);
   }
 }

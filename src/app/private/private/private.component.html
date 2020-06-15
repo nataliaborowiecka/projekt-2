@@ -8,7 +8,10 @@
       class="logo"
       [routerLink]="['/app/dashboard']"
     />
-
+    <ngx-auth-firebaseui-avatar
+      [canLogout]
+      (onSignOut)="signOut($event)"
+    ></ngx-auth-firebaseui-avatar>
     <mat-expansion-panel class="panel">
       <mat-expansion-panel-header hideToggle>
         <mat-icon class="icons">person</mat-icon>
@@ -67,21 +70,7 @@
     </mat-expansion-panel>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="toolbar">
-      <span class="spacer"></span>
-      <button
-        mat-raised-button
-        [matMenuTriggerFor]="menul"
-        class="logoutbutton"
-      >
-        <mat-icon aria-hidden="false" aria-label="Example home icon"
-          >person</mat-icon
-        >
-      </button>
-      <mat-menu #menul="matMenu">
-        <button mat-menu-item (click)="logOut()">Wyloguj</button>
-      </mat-menu>
-    </mat-toolbar>
+    <mat-toolbar class="toolbar"> </mat-toolbar>
     <mat-toolbar class="breadcrumbToolbar">
       <ol class="breadcrumb">
         <li *ngFor="let breadcrumb of breadcrumbs">

@@ -15,7 +15,6 @@ export class AddComponent implements OnInit {
     surname: new FormControl(null, [Validators.required]),
     login: new FormControl(null, [Validators.required]),
     password: new FormControl(null, [Validators.required]),
-    id: new FormControl(),
   });
   constructor(
     private userService: UsersService,

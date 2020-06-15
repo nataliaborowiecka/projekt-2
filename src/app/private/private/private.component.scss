@@ -13,6 +13,8 @@
   background-color: rgba(116, 162, 231, 0.418);
   position: fixed;
   z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 .toolbar {
   height: 7%;
@@ -96,4 +98,9 @@ a {
 }
 .breadcrumbToolbar {
   height: 5%;
+}
+.avatar {
+  height: 140px;
+  width: 50px;
+  margin: 0 auto;
 }

@@ -19,7 +19,7 @@ export class ClientsService {
   private clientDoc: AngularFirestoreDocument<Client>;
   clients: Observable<Client[]>;
   client: Observable<Client>;
-  constructor(private http: HttpClient, private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore) {
     this.clientsCollection = this.afs.collection<Client>('clients');
     this.clients = this.clientsCollection.snapshotChanges().pipe(
       map((actions) =>
@@ -44,7 +44,8 @@ export class ClientsService {
   add(form: Client) {
     return from(this.clientsCollection.add(form));
   }
-  delete(Client) {
+  delete(id: string) {
+    this.clientDoc = this.afs.doc<Client>(`clients/${id}`);
     return from(this.clientDoc.delete());
   }
   edit(form) {

@@ -31,16 +31,17 @@ export class ListComponent implements OnInit {
     });
   }
   delete(id) {
-    const dialogRef = this.dialog.open(DeleteComponent, {
-      width: '250px',
-      data: { isConfirm: true },
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        this.ticketsService.delete(id).subscribe((response) => this.getData());
-      }
-    });
+    // const dialogRef = this.dialog.open(DeleteComponent, {
+    //   width: '250px',
+    //   data: { isConfirm: true },
+    // });
+    // dialogRef.afterClosed().subscribe((result) => {
+    //   if (result) {
+
+    this.ticketsService.delete(id).subscribe((response) => this.getData());
   }
+  // });
+  // }
 
   selectColor(color) {
     switch (color) {
