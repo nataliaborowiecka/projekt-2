@@ -5,6 +5,7 @@ import { distinctUntilChanged, filter } from 'rxjs/operators';
 
 import { IBreadCrumb } from './private.type';
 
+
 @Component({
   selector: 'app-private',
   templateUrl: './private.component.html',
